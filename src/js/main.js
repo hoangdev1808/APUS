@@ -44,6 +44,20 @@ const toggleMenuMobile = () => {
 	});
 }
 
+//Header when scroll
+const activeHeaderWhenScroll = () => {
+	window.addEventListener("scroll", function() {
+		if (window.pageYOffset > 0 && $(window).width() >= 1280) {
+			document.querySelector("header").classList.add("header-scrolled");
+			$('header').find('.logo').addClass('active')
+		} else {
+			document.querySelector("header").classList.remove("header-scrolled");
+			$('header').find('.logo').removeClass('active');
+		}
+	});
+}
+
+
 function moveNavitem() {
 	if ($(window).width() <= 1024) {
 		$('.top-nav > #desktop').appendTo('nav .nav-mobile, .main-nav #mobile');
@@ -176,6 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	listSlide();
 	moveBreadcrum();
 	Slidepage();
+	activeHeaderWhenScroll();
 		// fullpage();
 	toolBout();
 	$(window).resize(function(){
