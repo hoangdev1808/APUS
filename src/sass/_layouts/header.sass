@@ -1,0 +1,198 @@
+header
+	position: fixed
+	width: 100%
+	height: 240px
+	background-image: url('../assets/banner/header.png')
+	background-size: cover
+	background-repeat: no-repeat
+	z-index: 1000
+	transition: all .3s ease-in-out
+	nav
+		position: relative
+		padding: 25px 0
+		width: 100%
+		display: flex
+		justify-content: space-between
+		.header-left
+			display: flex
+			align-items: center
+			.toggle-menu 
+				cursor: pointer
+				position: relative
+				padding: 20px
+				background-color: rgb(4, 30, 60)
+				width: 110px
+				height: 40px
+				display: flex
+				align-items: center
+				transition: .3s all linear
+				.hamburger-button
+					position: relative
+					width: 20px
+					transition: .3s all linear
+					margin-right: 13px
+					span 
+						position: absolute
+						left: 50%
+						transform: translate(-50%, -50%)
+						width: 20px
+						height: 2px
+						background-color: #fff
+						content: ""
+						transition: .3s all linear
+						&:first-child
+							top: -5px
+						
+						&:last-child
+							top: 5px
+				&.active 
+					transition: .3s all linear
+					background-image: linear-gradient( 90deg, rgb(165,122,97) 0%, rgb(233,198,141) 99%);
+					.hamburger-button
+						span
+							top: 50%
+							left: 50%
+							&:first-child 
+								transform: translate(-50%, -50%) rotate(45deg)
+							&:nth-child(2)
+								left: -50%
+								visibility: hidden
+								opacyti: 0
+								transition: .3s all linear
+							&:last-child
+								transform: translate(-50%, -50%) rotate(-45deg)
+				span
+					font-size: 14px;
+					font-family: "Inter";
+					color: rgb(255, 255, 255);
+					font-weight: bold;
+					text-align: center;
+			.language
+				background-color: rgb(255, 255, 255);
+				width: 90px;
+				height: 40px;
+				margin-left: 10px
+				ul 
+					width: 100%
+					height: 100%
+					list-style: none
+					display: flex
+					align-items: center
+					padding-left: 0
+					justify-content: center
+					li 
+						padding: 0 6px
+						&:first-child
+							padding-left: 0
+							border-right: solid 1px #999999
+						&:last-child
+							padding-right: 0
+						a 
+							font-size: 14px
+							color: rgb(153, 153, 153)
+							font-family: 'Inter'
+						&.active
+							a 
+								color: #e1ba66
+			.main-menu
+				position: absolute
+				top: 300%
+				background-color: rgba($color: #0b2237, $alpha: .8)
+				width: 590px
+				height: 658px
+				padding: 40px 55px 40px
+				padding-right: 0
+				visibility: hidden
+				opacity: 0
+				transition: all .5s ease-in-out
+				&::before
+					position: absolute
+					top: -40px
+					left: 50px
+					content: '\EA77'
+					font-family: 'remixicon'
+					font-size: 48px
+					color: rgba($color: #0b2237, $alpha: .8)
+				&.active
+					visibility: visible
+					opacity: 1
+					top: 100%
+					transition: all .5s ease-in-out
+				.nav-bar
+					list-style: none
+					padding-left: 0
+					.nav-item
+						padding-bottom: 30px
+						.nav-link
+							position: relative
+							width: max-content
+							padding: 0
+							font-size: 28px
+							font-family: "Inter"
+							color: rgb(255, 255, 255)
+							font-weight: bold;
+							text-transform: uppercase
+							&::before
+								position: absolute
+								content: ''
+								width: 20px
+								height: 1px
+								background-color: #c9a85a
+								top: 50%
+								left: -35px
+								transform: translateY(-50%)
+							&::after
+								position: absolute
+								content: ''
+								width: 60px
+								height: 1px
+								background-color: #c9a85a
+								top: 50%
+								right: -75px
+								transform: translateY(-50%)
+		.logo
+			width: 117px
+			height: 71px
+			text-align: center
+		.header-right
+			display: flex
+			align-items: center
+			.hotline
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: rgb(4, 30, 60)
+				width: 200px
+				height: 40px
+				.ri-phone-fill
+					font-size: 18px
+					font-family: "Material Icons"
+					color: #d4ad5a
+					padding-right: 10px
+				p 
+					font-size: 14px
+					font-family: "Inter"
+					font-weight: bold
+					color: #d4ad5a
+			.btn-signup
+				background-image: linear-gradient( 0deg, rgb(165,122,97) 0%, rgb(233,198,141) 99%)
+				width: 200px
+				height: 40px
+				margin-left: 10px
+				border-radius: 0
+				line-height: 40px
+				font-size: 14px
+				font-family: "Inter"
+				color: rgb(255, 255, 255)
+				font-weight: bold
+			.search
+				background-color: rgb(255, 255, 255)
+				width: 40px
+				height: 40px
+				margin-left: 10px
+				text-align: center
+				em
+					line-height: 40px
+					font-size: 24px
+					font-family: "Material Icons"
+					color: rgb(153, 153, 153)
