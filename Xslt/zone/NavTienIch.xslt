@@ -5,10 +5,10 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
         <ul>
-            <xsl:apply-templates select="/LanguageList/Language"></xsl:apply-templates>
+            <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
         </ul>
     </xsl:template>
-    <xsl:template match="Language">
+    <xsl:template match="Zone">
         <li>
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">

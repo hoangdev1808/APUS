@@ -47,7 +47,7 @@ const toggleMenuMobile = () => {
 //Header when scroll
 const activeHeaderWhenScroll = () => {
 	window.addEventListener("scroll", function() {
-		if (window.pageYOffset > 0 && $(window).width() >= 1280) {
+		if (window.pageYOffset > 0 && $(window).width() >= 1024) {
 			document.querySelector("header").classList.add("header-scrolled");
 			$('header').find('.logo').addClass('active')
 		} else {
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleMenuMobile();
 	moveNavitem();
 	EXIMMainBanner();
-	checkLayoutBanner();
+	// checkLayoutBanner();
 	checkFooter();
 	listSlide();
 	moveBreadcrum();

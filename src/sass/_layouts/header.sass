@@ -5,7 +5,7 @@ header
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: bottom
-	z-index: 1000
+	z-index: 900
 	transition: all .3s ease-in-out
 	nav
 		position: relative
@@ -70,6 +70,8 @@ header
 				width: 90px;
 				height: 40px;
 				margin-left: 10px
+				.Module
+					height: 100%
 				ul 
 					width: 100%
 					height: 100%
@@ -156,13 +158,30 @@ header
 						&.dropdown
 							.dropdown-menu
 								display: block
-								top: 300%
+								top: -100%
+								left: 50%
 								visibility: hidden
 								opacity: 0
 								transition: all ease-in-out .3s
 								border: none
 								border-radius: 0
 								padding: 0
+								background-color: transparent
+								.dropdown-item
+									a 
+										font-size: 18px
+										font-family: "Inter"
+										color: rgb(255, 255, 255)
+										text-transform: uppercase
+										text-align: left
+									&:hover
+										background-color: transparent
+										a
+											color: #d5ab67
+									&.active
+										a 
+											color: #d5ab67
+
 						&:hover
 							.nav-link
 								transform: translateX(40px)
@@ -172,10 +191,56 @@ header
 								&::after
 									visibility: visible
 									opacity: 1
+							&.dropdown
+								.dropdown-menu
+									visibility: visible
+									opacity: 1
+						&.active
+							.nav-link
+								transform: translateX(40px)
+								transition: all .3s ease-in-out
+								color: #d5ab67
+								&::before,
+								&::after
+									visibility: visible
+									opacity: 1
+						&:nth-child(4)
+							&.dropdown
+								.dropdown-menu
+									top: -15%
+									left: 50%
+				a 
+					display: flex
+					align-items: center
+					font-size: 18px
+					font-family: "Inter"
+					color: rgb(255, 255, 255)
+					.material-icons
+						padding-right: 10px
+						font-size: 20px
+						font-family: "Material Icons"
+						color: rgba(255, 255, 255, 0.502)
+				.social
+					display: flex
+					list-style: none
+					padding-left: 0
+					margin-top: 25px
+					li 
+						border-width: 1px
+						border-color: rgb(255, 255, 255)
+						border-style: solid
+						border-radius: 50%
+						width: 34px
+						height: 34px
+						display: flex
+						align-items: center
+						justify-content: center
+						margin-right: 10px
 
 		.logo
 			position: absolute
 			left: 50%
+			transform: translateX(-50%)
 			width: 117px
 			height: 71px
 			text-align: center
@@ -194,7 +259,7 @@ header
 			position: absolute
 			left: 50%
 			top: 50%
-			transform: translateY(-50%)
+			transform: translate(-50%, -50%)
 			width: 0
 			height: 0
 			visibility: hidden
@@ -261,7 +326,7 @@ header
 			position: absolute
 			left: 50%
 			top: 50%
-			transform: translateY(-50%)
+			transform: translate(-50%, -50%)
 			width: 45px
 			height: 45px
 			transition: all .3s ease-in-out

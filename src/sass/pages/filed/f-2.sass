@@ -1,0 +1,162 @@
+.filed-1
+	padding-top: 0
+	.filed-nav
+		width: 100%
+		ul
+			display: flex
+			align-items: center
+			padding-left: 0
+			justify-content: center
+			list-style: none
+			margin-bottom: 67px
+			li 
+				background-color: #041e3c
+				width: 240px
+				height: 60px
+				border-top: solid 2px #fff
+				line-height: 60px
+				text-align: center
+				a 
+					padding: 20px 30px
+					font-size: 16px
+					font-family: "Inter"
+					color: #e3b85c
+					font-weight: bold
+					text-transform: uppercase
+				&:first-child
+					border-right: solid 2px #fff
+				&.active
+					background-image: linear-gradient( 0deg, rgb(165,122,97) 0%, rgb(233,198,141) 99%)
+					a 
+						color: #fff
+				@media screen and ( max-width: 575px)
+					width: auto
+					padding: 0 15px
+					a 
+						padding: 0
+						font-size: 14px
+	.block-title
+		margin-bottom: 30px
+		h2 
+			font-size: 20px
+			font-family: "Inter"
+			color: rgb(4, 30, 60)
+			text-transform: uppercase
+			text-align: center
+			font-weight: 400
+			margin-bottom: 20px
+	.filed-item
+		.desc
+			width: 808px
+			margin: 0 auto
+			h1 
+				position: relative
+				font-size: 36px
+				font-family: "SFU Sigvar"
+				color: rgb(201, 163, 120)
+				text-transform: uppercase
+				line-height: 1.2
+				text-align: center
+				font-weight: 800
+				margin-bottom: 60px
+				&::after
+					position: absolute
+					background-color: rgb(201, 163, 120)
+					width: 90px
+					height: 1px
+					content: ''
+					bottom: -30px
+					left: 50%
+					transform: translateX(-50%)
+			p 
+				font-size: 18px;
+				font-family: "Inter";
+				color: rgb(51, 51, 51);
+				line-height: 1.444;
+				text-align: center;
+		.img
+			margin-top: 37px
+			width: 100%
+			height: 720px
+			img 
+				width: 100%
+				height: 100%
+				object-fit: cover
+	table
+		width: 100%
+		margin-top: 45px
+		tbody
+			tr
+				td 
+					padding-bottom: 15px
+					.munber 
+						border-width: 1px
+						border-color: rgb(4, 30, 60)
+						border-style: solid
+						border-radius: 50%
+						background-color: rgb(255, 255, 255)
+						width: 58px
+						height: 58px
+						font-size: 18px
+						font-family: "Inter"
+						color: rgb(4, 30, 60)
+						font-weight: bold
+						line-height: 58px
+						text-align: center
+					a 
+						font-size: 18px
+						font-family: "Inter"
+						color: rgb(0, 51, 51)
+						font-weight: bold
+						text-align: left
+					@media screen and ( max-width:  1440px)
+						a 
+							font-size: 14px
+					&:nth-last-child(odd)
+						padding-right: 15px
+						@media screen and ( max-width:  1440px)
+							padding-right: 15px
+						@media screen and ( max-width:  1399px)
+							padding-right: 0
+					&:nth-of-type(odd)
+						padding-right: 15px
+						@media screen and ( max-width:  1440px)
+							padding-right: 5px
+			@media screen and ( max-width: 1200px)
+				display: none
+	.list-mobile
+		.item
+			margin-bottom: 30px
+			box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1)
+			ul 
+				padding: 30px 0
+				list-style: none
+				padding-left: 0
+				li 
+					display: flex
+					align-items: center
+					margin-bottom: 15px
+					.munber 
+						margin-right: 15px
+						border-width: 1px
+						border-color: rgb(4, 30, 60)
+						border-style: solid
+						border-radius: 50%
+						background-color: rgb(255, 255, 255)
+						min-width: 58px
+						min-height: 58px
+						font-size: 18px
+						font-family: "Inter"
+						color: rgb(4, 30, 60)
+						font-weight: bold
+						line-height: 58px
+						text-align: center
+					a 
+						font-size: 18px
+						font-family: "Inter"
+						color: rgb(0, 51, 51)
+						font-weight: bold
+						text-align: left
+		@media screen and ( min-width: 1199px)
+			display: none
+

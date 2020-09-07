@@ -28,25 +28,33 @@
 				<header>
 					<div class="container">
 						<nav>
-							<div class="toggle-menu"></div>
+							<div class="header-left">
+								<div class="toggle-menu">
+									<div class="hamburger-button"><span></span><span></span><span></span></div><span>MENU</span>
+								</div>
+								<div class="language">
+									<portal:modulewrapper id="mdl160" runat="server" configuremoduleid="160" />
+								</div>
+								<div class="main-menu">
+									<portal:modulewrapper id="mdl140" runat="server" configuremoduleid="140" />
+									<a href=""><em class="material-icons">mail_outline</em>Đăng ký nhận thông tin</a>
+									<ul class="social">
+										<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+										<li><a href=""><i class="fab fa-instagram"></i></a></li>
+										<li><a href=""><i class="fab fa-youtube"></i></a></li>
+									</ul>
+								</div>
+							</div>
 							<div class="logo">
 								<portal:modulewrapper id="mdl138" runat="server" configuremoduleid="138" />
 							</div>
-							<div class="nav-mobile"></div>
-							<div class="main-nav">
-								<div class="top-nav">
-									<div id="desktop">
-										<portal:modulewrapper id="mdl139" runat="server" configuremoduleid="139" />
-										<a class="search" data-animation-duration="700" data-src="#searchfancybox" href="javascript:;">
-											<em class="material-icons">search</em>
-										</a>
-										<portal:modulewrapper id="mdl141" runat="server" configuremoduleid="141" />
-									</div>
-								</div>
-								<ul class="nav-list">
-									<portal:modulewrapper id="mdl140" runat="server" configuremoduleid="140" />
-								</ul>
-								<div id="mobile"></div>
+							<div class="logo-scroll">
+								<portal:modulewrapper id="mdl139" runat="server" configuremoduleid="139" />
+							</div>
+							<div class="header-right">
+								<div class="hotline"><em class="ri-phone-fill"></em>
+									<p>0928 247 247</p>
+								</div><a class="btn btn-signup" href="">Đăng kí tham quan</a><a class="search" data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;"><em class="material-icons">search</em></a>
 							</div>
 						</nav>
 					</div>
@@ -72,99 +80,13 @@
 						<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
 					</asp:Panel>
 				</main>
-					<footer>
-						<div class="footer-block">
-							<div class="container">
-								<div class="row">
-									<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card pr-40">
-										<div class="card__title">
-											<h2>thông tin liên hệ</h2>
-										</div>
-										<div class="card__body">
-											<ul>
-												<li><span><i class="ri-map-pin-5-line"></i></span>
-													<p>Địa chỉ: 201B Nguyễn Chí Thanh, Phường 12, Quận 5, Thành phố Hồ Chí Minh</p>
-												</li>
-												<li><span><i class="ri-phone-line"></i></span>
-													<p>Điện thoại: <strong>(84-028) 38554137 - (84-028) 38554138 </strong></p>
-												</li>
-												<li><span><i class="ri-printer-line"></i></span>
-													<p>Fax: (84-028) 38557267</p>
-												</li>
-												<li><span><i class="ri-mail-line"></i></span>
-													<p>Email: truyenthong@bvchoray.com</p>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card">
-										<div class="card__title">
-											<h2>giới thiệu</h2>
-										</div>
-										<div class="card__body">
-											<ul>
-												<li><a href="">Tổng quan</a></li>
-												<li><a href="">Lịch sử hình thành</a></li>
-												<li><a href="">Dịnh hướng phát triển</a></li>
-												<li><a href="">Cơ cấu tổ chức</a></li>
-												<li><a href="">Hệ thống văn bản</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card">
-										<div class="card__title">
-											<h2>các trung tâm</h2>
-										</div>
-										<div class="card__body">
-											<ul>
-												<li><a href="">Trung tâm khu vực về thông tin thuốc và theo dõi phản ứng có hại của thuốc</a></li>
-												<li><a href="">Trung tâm truyền máu khu vực phía Nam</a></li>
-												<li><a href="">Trung tâm Tim mạch Chợ Rẫy</a></li>
-												<li><a href="">Trung tâm Ung bứu Chợ Rẫy</a></li>
-												<li><a href="">Trung tâm Đào tạo – Chỉ đạo tuyến</a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card">
-										<div class="card__title">
-											<h2>hỗ trợ khách hàng</h2>
-										</div>
-										<div class="card__body">
-											<ul>
-												<li><a href="">Bảng giá dịch vụ</a></li>
-												<li><a href="">Đặt lịch hẹn bác sĩ</a></li>
-												<li><a href="">Đặt mua gói khám sức khỏe</a></li>
-												<li><a href="">Những câu hỏi thường gặp</a></li>
-												<li><a href="">Chính sách bảo mật</a></li>
-												<li><a href="">Tiếp nhận ý kiến khách hàng</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
+				<footer>
+					<div class="footer-block">
+						<div class="container">
+							<portal:modulewrapper id="mdl158" runat="server" configuremoduleid="158" />
+							<portal:modulewrapper id="mdl159" runat="server" configuremoduleid="159" />
 						</div>
-						<div class="copyright">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-3 col-sm-6 col-6 content"><a href="">© 2020 Chợ Rẫy</a></div>
-									<div class="col-md-3 col-sm-6 col-6 content"><a href="">Thiết kế website bởi Cánh Cam</a></div>
-									<div class="col-md-3 col-sm-6 col-6 content">
-										<ul>
-											<li><a href="">Sitemap</a></li>
-											<li><a href="">Quy định sử dụng</a></li>
-										</ul>
-									</div>
-									<div class="col-md-3 col-sm-6 col-6 content">
-										<ul class="social">
-											<li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-											<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-											<li><a href=""><i class="fab fa-instagram"></i></a></li>
-											<li><a href=""><i class="fab fa-youtube"></i></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
+					</div>
 				</footer>
 			</div>
 			<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">

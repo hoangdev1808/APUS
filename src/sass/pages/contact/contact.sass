@@ -1,0 +1,286 @@
+.contact
+	.block-title
+		margin-bottom: 77px
+		h2 
+			font-size: 20px
+			font-family: "Inter"
+			color: rgb(4, 30, 60)
+			text-align: center
+		h1 
+			position: relative
+			font-size: 36px
+			font-family: "SFUSigvarDemiBold"
+			color: rgb(201, 163, 120)
+			text-transform: uppercase
+			text-align: center
+			&::after
+				position: absolute
+				background-color: rgb(201, 163, 120)
+				width: 90px
+				height: 1px
+				content: ''
+				bottom: -32px
+				left: 50%
+				transform: translateX(-50%)
+
+	.contact-infor
+		padding-top: 65px
+		.content
+			h3 
+				font-size: 22px
+				font-family: "Inter"
+				color: rgb(201, 163, 120)
+				font-weight: bold
+				text-transform: uppercase
+				text-align: left
+				margin-bottom: 35px
+			ul
+				list-style: none
+				padding-left: 0
+				margin-bottom: 30px
+				li 
+					span 
+						display: flex 
+						align-items: center
+						em 
+							padding-right: 30px
+							color: rgb(201, 163, 120)
+							font-size: 36px
+							display: flex
+							align-items: flex-start
+						p 
+							font-size: 16px
+							font-family: "Inter"
+							color: rgb(51, 51, 51)
+							font-weight: bold
+							text-align: left
+			.social
+				display: flex
+				li 
+					border-radius: 50%
+					background-color: #041e3c
+					width: 40px
+					height: 40px
+					z-index: 19
+					margin-left: 10px
+					padding: 0
+					display: flex
+					align-items: center
+
+					&:last-child
+						padding: 0
+						border: none
+					a
+						width: 100%
+						text-align: center
+						padding: 10px 0
+						em
+							font-size: 18px
+							color:#bf9772
+							text-align: center
+							z-index: 20
+	.contact-img
+		width: 100%
+		height: 450px
+		img 
+			width: 100%
+			height: 100%
+			object-fit: cover
+	@media screen and ( max-width: 1024px)
+		.contact-infor
+			.content
+				h3 
+					font-size: 20px
+		.contact-img
+			width: 100%
+			height: 400px
+	@media screen and ( max-width: 991px)
+		.contact-infor
+			padding-top: 0
+			height: 100%
+			display: flex
+			align-items: center
+			.content
+				h3
+					font-size: 16px
+					margin-bottom: 15px
+				ul
+					margin-bottom: 15px
+					li 
+						span 
+							em 
+								font-size: 20px
+								padding-right: 7px
+		.contact-img
+			height: 370px
+	@media screen and ( max-width: 768px)
+		.contact-infor
+			.content
+				h3
+					font-size: 15px
+				ul
+					li 
+						span 
+							p 
+								font-size: 14px
+		.contact-img
+			height: auto
+.contact-2
+	padding-top: 0
+	.content
+		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1)
+		.contact-map
+			width: 100%
+			height: 710px
+			iframe
+				width: 100%
+				height: 100%
+
+		.contact-form
+			padding-top: 45px
+			padding-left: 17px
+			padding-right: 60px
+			.block-title
+				margin-bottom: 30px
+				h2
+					font-size: 30px
+					color: rgb(219, 182, 132)
+					text-transform: uppercase
+					text-align: left
+					font-weight: 400
+			.desc
+				font-size: 18px
+				font-family: "Inter"
+				color: rgb(51, 51, 51)
+				line-height: 1.444
+				text-align: left
+				margin-block-end: 30px
+
+			.box-form
+				.Module
+					.ModuleContent
+						.wrap-form
+							.form-group,
+							.require 
+								position: relative
+								span 
+									color: #ef5350
+									&::before
+										color: #ef5350
+										font-family: Font Awesome 5 Free
+								input
+									border-width: 1px
+									border-color: rgb(225, 225, 225)
+									border-style: solid
+									background-color: rgb(250, 250, 250)
+									width: 598px
+									height: 48px
+								textarea
+									border-width: 1px
+									border-color: rgb(225, 225, 225)
+									border-style: solid
+									background-color: rgb(250, 250, 250)
+									width: 598px
+									height: 98px
+							.frm-captcha
+								display: flex
+								float: left
+								.frm-captcha-input
+									label
+										display: none
+								input
+									border-width: 1px
+									border-color: rgb(225, 225, 225)
+									border-style: solid
+									background-color: rgb(250, 250, 250)
+									width: 208px;
+									height: 48px;
+									margin-right: 10px
+								.RadCaptcha_Default
+									position: relative
+									span 
+										position: absolute
+										top: 100%
+										left: 0
+									div
+										div
+											display: flex
+											align-items: center
+											flex-direction: row-reverse
+											.rcRefreshImage
+												position: relative
+												display: flex
+												align-items: center
+												font-size: 0
+												width: 25px
+												height: 48px
+												margin-right: 15px
+												&::after
+													position: absolute
+													content: 'replay'
+													font-size: 25px
+													font-family: "Material Icons"
+													color: rgb(153, 153, 153)
+												img
+													width: 170px
+													height: 48px
+
+							.frm-btnwrap
+								float: left
+								margin-left: 10px
+								label
+									display: none
+								.frm-btn-reset
+									display: none
+								.frm-btn
+									input 
+										background-color: rgb(4, 30, 60)
+										width: 150px
+										height: 50px
+										border-radius: 0
+										font-size: 16px
+										color: #e9c68d
+										font-family: "Inter"
+										font-weight: bold
+										text-transform: uppercase
+
+		@media screen and ( max-width: 1440px)
+			.contact-form
+				padding: 0
+				.box-form
+					.form-group
+						input,
+						textarea
+							width: 100%
+					.frm-captcha
+						input
+							width: 150px
+		@media screen and ( max-width: 1199px)
+			.contact-form
+				padding: 0
+		@media screen and ( max-width: 1024px)
+			.contact-map
+				margin-bottom: 30px
+			.contact-form
+				.block-title
+					margin-bottom: 10px
+				.desc
+					margin-bottom: 10px
+				.box-form
+					.frm-btnwrap
+						.frm-btn
+							input 
+								width: 150px
+		@media screen and ( max-width: 575px)
+			.contact-map
+				height: 300px
+			.contact-form
+				.box-form
+					.frm-captcha
+						.RadCaptcha
+							.rcRefreshImage
+								img 
+									width: 144px
+					.frm-btnwrap
+						margin-left: 0
+						margin-top: 16px
