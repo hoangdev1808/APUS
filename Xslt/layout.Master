@@ -60,6 +60,14 @@
 					</div>
 				</header>
 				<main>
+					<div id="fake-header">
+						<div class="close-button"><em class="lnr lnr-cross"></em><span>Close</span></div>
+						<div class="menu-fake-header"></div>
+						<div class="logo-fake-header"></div>
+					</div>
+					<div id="fake-header-open">
+						<div class="open-button"><span>Menu</span></div>
+					</div>
 					<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
 						<asp:ContentPlaceHolder ID="altContent1" runat="server">
 						</asp:ContentPlaceHolder>
@@ -119,41 +127,41 @@
 					</div>
 				</div>
 				<script type="text/javascript">
-                    $(document).ready(function() {
-                        $("#pullmenucms").click(function(e) {
-                            e.preventDefault();
-                            if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
-                                ShowToolbar();
-                                Set_Cookie('toolbarOpenState', 'open');
-                            } else {
-                                HideToolbar();
-                                Set_Cookie('toolbarOpenState', 'closed');
-                            }
-                        });
-                        var openState = Get_Cookie('toolbarOpenState');
-                        if (openState != null) {
-                            if (openState == 'closed') {
-                                HideToolbar();
-                            }
-                            if (openState == 'open') {
-                                ShowToolbar();
-                            }
-                        }
-                    });
+$(document).ready(function() {
+	$("#pullmenucms").click(function(e) {
+		e.preventDefault();
+		if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+			ShowToolbar();
+			Set_Cookie('toolbarOpenState', 'open');
+		} else {
+			HideToolbar();
+			Set_Cookie('toolbarOpenState', 'closed');
+		}
+	});
+	var openState = Get_Cookie('toolbarOpenState');
+	if (openState != null) {
+		if (openState == 'closed') {
+			HideToolbar();
+		}
+		if (openState == 'open') {
+			ShowToolbar();
+		}
+	}
+});
 
-                    function HideToolbar() {
-                        $('.cmsadminpanel').addClass("toggled");
-                        $('.fa-chevron-circle-right').addClass('fa-rotate-180');
-                    }
+function HideToolbar() {
+	$('.cmsadminpanel').addClass("toggled");
+	$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+}
 
-                    function ShowToolbar() {
-                        $('.cmsadminpanel').removeClass("toggled");
-                        $('.fa-chevron-circle-right').removeClass('fa-rotate-180');
-                    }
+function ShowToolbar() {
+	$('.cmsadminpanel').removeClass("toggled");
+	$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+}
 				</script>
 			</portal:AutoHidePanel>
 			<portal:Woopra ID="woopra11" runat="server" />
-            <div id="searchfancybox" style="display: none;">
+			<div id="searchfancybox" style="display: none;">
 				<div class="container">
 					<div class="content">
 						<div class="form-group">
@@ -163,7 +171,9 @@
 				</div>
 			</div>
 		</form>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
+		<script src="/Data/Sites/1/skins/default/js/fullpage.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
 	</body>
 
