@@ -1,0 +1,19 @@
+section.the-apus-home-12.main-section(setBackground="./assets/home-m/bg-3.png")
+	.container
+		.section-title.text-center.line
+			p TIN TỨC SỰ KIỆN
+			h2 cập nhật thông tin mới nhất từ APUS
+		.news-list
+			.row
+				- for (i=1; i<7; i++)
+					.col-sm-6.col-lg-4
+						.news-item
+							.image
+								a(href="#")
+									img(src="./assets/home-m/4.png", alt="")
+							.caption
+								time 07.07.2020
+								a(href="#").name Những lý do khiến thị trường Phước Hải trở thành “ngôi sao đầu tư” nghỉ dưỡng mới miền Nam 
+								a(href="#").view-detail XEM CHI TIẾT
+		.view-more
+			a(href="#") Xem thêm

@@ -1,0 +1,61 @@
+.the-apus-home-11
+	.main-product
+		margin-top: 26px
+	.product-item
+		+ .product-item
+			margin-top: 20px
+		.image
+			+img-scale(380/829.99)
+		.title
+			font-size: 24px
+			font-weight: 700
+			color: $main 
+			text-transform: uppercase
+			margin-bottom: 20px
+			@media(min-width: 768px)
+				font-size: 26px
+			@media(min-width: 1024px)
+				font-size: 28px
+			@media(min-width: 1200px)
+				font-size: 30px
+				margin-bottom: 0
+		@media(min-width: 1200px)
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			.image
+				width: 829.99px
+				height: 380px
+				padding-top: 0
+			.title
+				display: flex
+				align-items: center
+				padding-right: 30px
+				line-height: 1.5
+				&::after
+					content: url(../assets/home-m/line.png)
+					height: 35px
+					display: flex
+					justify-content: center
+					align-items: center
+					padding-left: 25px
+					// position: absolute
+					// top: 50%
+					// left: 100%
+					// transform: translateY(-50%) 
+			+ .product-item
+				flex-direction: row-reverse
+				.title
+					padding-right: 0
+					padding-left: 30px
+					&::after
+						display: none
+					&::before
+						content: url(../assets/home-m/line.png)
+						height: 35px
+						display: flex
+						justify-content: center
+						align-items: center
+						transform: rotate(180deg)
+						padding-left: 25px
+				// justify-content: flex-start

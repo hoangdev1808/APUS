@@ -2,7 +2,7 @@
 	"fonts": [
 		"node_modules/@mdi/font/fonts/**",
 		"src/fonts/**"
-		
+
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.js",
@@ -13,7 +13,7 @@
 		"bower_components/pagePiling.js/dist/jquery.pagepiling.js"
 	],
 	"css": [
-		"node_modules/@mdi/font/css/materialdesignicons.mim.css",
+		"node_modules/@mdi/font/css/materialdesignicons.min.css",
 		"bower_components/bootstrap/dist/css/bootstrap.min.css",
 		"bower_components/swiper/dist/css/swiper.min.css",
 		"bower_components/fancybox/dist/jquery.fancybox.css",

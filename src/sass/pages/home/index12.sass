@@ -1,0 +1,70 @@
+.the-apus-home-12
+	.news-list
+		.news-item
+			margin-top: 30px
+			padding-bottom: 50px
+			position: relative
+			.image
+				+img-scale(270/450)
+			.caption
+				position: absolute
+				bottom: 0
+				z-index: 11
+				right: 0
+				width: 100%
+				max-width: 400px
+				background: #ffffff
+				min-height: 130px
+				padding: 10px 30px
+				time 
+					font-size: 12px
+					font-weight: 400
+					color: #999999
+				.name 
+					display: block
+					font-size: 18px
+					font-weight: 700
+					color: $blue 
+					transition: .2s ease-in-out all
+					line-height: 1.2
+					+line(3)
+					height: 65px
+					&:hover 
+						color: $main
+				.view-detail
+					font-size: 10px
+					font-weight: 500
+					color: $main
+			&:hover 
+				.image 
+					img 
+						transform: scale(1.1)
+	.view-more
+		display: flex
+		justify-content: center
+		align-items: center
+		background: $blue
+		width: max-content
+		margin-left: auto 
+		margin-right: auto 
+		margin-top: 30px
+		border: 1px solid $blue
+		transition: .2s ease-in-out all
+		a 
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 50px
+			// background: $blue 
+			min-width: 150px
+			padding: 5px 15px
+			text-align: center
+			background-image: linear-gradient(42deg, rgba(165,122,97,1) 0%, rgba(233,198,141,1) 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			font-size: 16px
+			font-weight: 800
+			text-transform: uppercase
+		&:hover 
+			background: #ffffff
+			border-color: $main

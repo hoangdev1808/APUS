@@ -1,0 +1,90 @@
+.the-apus-home-13
+	.main-content
+		margin-top: 20px
+		color: #ffffff
+		text-align: center
+		.mt-20
+			margin-top: 20px
+		a 
+			color: #ffffff
+			font-weight: 700
+		em 
+			color: #ffffff
+		address
+			font-size: 16px
+			font-weight: 400
+		ul 
+			display: flex
+			flex-wrap: wrap 
+			justify-content: center
+			align-items: center
+			list-style-type: none 
+			margin: 0
+			padding: 0
+			li 
+				margin: 5px 0
+				padding: 0 15px
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					right: 0
+					background: #ffffff
+					width: 1px 
+					height: 12px
+				&:last-child
+					&:before 
+						display: none 
+				a 
+					em 
+						padding-right: 10px
+					&:last-child
+						em 
+							padding-right: 0
+		.register-news
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top: 35px
+
+			a 
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 50px
+				padding: 5px 15px
+				min-width: 240px
+				background-image: $gradient-1
+				text-align: center
+				font-size: 16px
+				font-weight: 800
+				color: #ffffff
+				transition: .2s ease-in-out all
+				text-transform: uppercase
+		.list-icon
+			display: flex
+			justify-content: center
+			align-items: center
+			max-width: 570px
+			margin-left: auto 
+			margin-right: auto 
+			margin-top: 40px
+			width: 100%
+			> .row
+				width: 100%
+			.icon-item
+				.name 
+					font-size: 16px
+					font-weight: 500
+					text-transform: uppercase
+					margin-bottom: 20px
+				img 
+					text-align: center
+					max-width: 100%
+		.copyright
+			margin-top: 70px
+			p 
+				font-size: 12px
+				font-family: 'Inter'

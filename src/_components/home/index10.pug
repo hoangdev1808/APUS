@@ -1,0 +1,38 @@
+section.the-apus-home-10.main-section(setBackground="./assets/home-m/bg-1.png")
+	.container
+		.section-title.text-center.line
+			p.white Phân khu
+			h2 Điểm đến của những trải nghiệm
+				br 
+				| sang trọng đích thực
+		ul.list-tabs
+			li(toggle-for="1").active
+				a(href="javascript:void(0)") the eden 
+			li(toggle-for="2")
+				a(href="javascript:void(0)") the jungle
+			li(toggle-for="3")
+				a(href="javascript:void(0)") The aqua
+			li(toggle-for="4")
+				a(href="javascript:void(0)") The Marine
+			li(toggle-for="5")
+				a(href="javascript:void(0)") The Ferris 
+			li(toggle-for="6")
+				a(href="javascript:void(0)") The Lighthouse 
+			li(toggle-for="7")
+				a(href="javascript:void(0)") The Lounge
+		.main-slide
+			.box-slide(tab-id="1")
+				.swiper-container
+					.swiper-wrapper
+						- for (i=1; i<11; i++)
+							.swiper-slide
+								.image
+									img(src="./assets/home-m/1.png", alt="")
+									.button-icon-search
+										a(href="#")
+											em.mdi.mdi-magnify
+			.main-button
+				.button-prev
+					em.lnr.lnr-arrow-left
+				.button-next
+					em.lnr.lnr-arrow-right
