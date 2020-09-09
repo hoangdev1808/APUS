@@ -11,9 +11,6 @@ import {
 	jsTask2
 } from "./.tasks/script";
 import {
-	jsFullPageTask
-} from "./.tasks/fullpage";
-import {
 	pugTask
 } from "./.tasks/html";
 import {
@@ -43,7 +40,6 @@ exports.default = series(
 	cssTask,
 	jsTask,
 	jsTask2,
-	jsFullPageTask,
 	pugTask,
 	server,
 )

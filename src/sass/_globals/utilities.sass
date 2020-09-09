@@ -55,27 +55,41 @@
 
 	@media (min-width: 1440px) 
 		padding: 66px 0
-.main-title 
-	background-image: url('../assets/images/index/title-bg.png')
-	width: 330px
-	background-position: center
-	background-size: cover
-	background-repeat: no-repeat
-	height: 65px
-	text-align: center
-	h1 
-		font-size: 32px
-		font-family: "Montserrat"
-		color: rgb(255, 255, 255)
-		font-weight: bold
+.sec-title
+	h2 
+		font-size: 24px
+		font-family: "Inter"
+		color: rgb(4, 30, 60)
 		text-transform: uppercase
-		line-height: 65px
-	@media(max-width: 1440px) 
-		width: 232px
-		height: 45px
-		h1
-			font-size: 20px
-			line-height: 45px
+		font-weight: 400
+		margin-bottom: 20px
+	.text 
+		position: relative
+		font-size: 44px
+		font-weight: bold
+		font-family: "SFU Sigvar"
+		background-image: linear-gradient(to right, #bb9667, #e2bd6c)
+		text-transform: uppercase
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		&::after
+			position: absolute
+			background-image: linear-gradient(to right, rgba($color: #a57a61, $alpha: .6), #e9c68d)
+			width: 90px
+			height: 1px
+			content: ''
+			bottom: -20px
+			left: 0
+	@media screen and ( max-width: 1440px)
+		h2 
+			font-size: 18px
+		h1 
+			font-size: 35px
+	@media screen and ( max-width: 1199px)
+		h2 
+			font-size: 16px
+		h1 
+			font-size: 26px
 .block-title
 	position: relative
 	h2 

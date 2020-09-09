@@ -1,3 +1,45 @@
+function fullpage() {
+	if (($(window).width() > 1280) && ('#pagepiling'.length >= 1)) {
+		$('#pagepiling').pagepiling({
+			menu: null,
+			direction: 'vertical',
+			verticalCentered: true,
+			sectionsColor: [],
+			anchors: [],
+			scrollingSpeed: 900,
+			easing: 'swing',
+			loopBottom: true,
+			loopTop: false,
+			css3: true,
+			normalScrollElements: null,
+			normalScrollElementTouchThreshold: 5,
+			touchSensitivity: 5,
+			keyboardScrolling: true,
+			sectionSelector: '.section',
+			animateAnchor: true,
+
+			//events
+			onLeave: function(index, nextIndex, direction) {
+				if (direction == 'down') {
+					$('header').addClass('active')
+					// $('.logo').addClass('active')
+				}
+			},
+			afterLoad: function(anchorLink, index) {
+				if (index == 1) {
+					$('header').removeClass('active')
+					// $('.logo').removeClass('active')
+				}
+			},
+			afterRender: function() {},
+		});
+	}
+	if (('#pagepiling'.length >= 1) && ($(window).width() > 1280)) {
+		$('body').css('overflow', 'hidden')
+	} else {
+		$('body').css('overflow', 'auto')
+	}
+}
 const toggleMenuMobile = () => {
 	$(".toggle-menu").on("click", function() {
 		$(this).toggleClass("active");
@@ -135,16 +177,6 @@ function Slidepage() {
 			}
 		},
 	});
-	let home10Slide = new Swiper('.the-apus-home-10 .swiper-container', {
-		// slidesPerView: 3,
-		spaceBetween: 30,
-		speed: 500,
-		loop: true,
-		navigation: {
-			nextEl: '.the-apus-home-10 .button-next',
-			prevEl: '.the-apus-home-10 .button-prev',
-		},
-	});
 }
 
 function toolBout() {
@@ -153,26 +185,30 @@ function toolBout() {
 	})
 }
 
-function setBackgroundElement() {
-	$("[setBackground]").each(function() {
-		var background = $(this).attr("setBackground");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-size": "cover",
-			"background-position": "center center",
-		});
-	});
-	$("[setBackgroundRepeat]").each(function() {
-		var background = $(this).attr("setBackgroundRepeat");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-repeat": "repeat",
+function coutingNumber() {
+	$('.counter').each(function() {
+		var $this = $(this),
+			countTo = $this.attr('data-count');
+		$({
+			countNum: $this.text()
+		}).animate({
+			countNum: countTo
+		}, {
+			duration: 5000,
+			easing: 'linear',
+			step: function() {
+				$this.text(Math.floor(this.countNum));
+			},
+			complete: function() {
+				$this.text(this.countNum);
+				//alert('finished');
+			}
+
 		});
 	});
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	setBackgroundElement();
 	toggleMenuMobile();
 	moveNavitem();
 	EXIMMainBanner();
@@ -182,8 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	moveBreadcrum();
 	Slidepage();
 	activeHeaderWhenScroll();
-	// fullpage();
+	coutingNumber();
 	toolBout();
+	// fullpage();
 	$(window).resize(function() {
 		if ($(window).width() <= 1024) {
 			moveNavitem();

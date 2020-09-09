@@ -11,9 +11,7 @@ import {
 	jsTask,
 	jsTask2
 } from "./script"
-import {
-	jsFullPageTask
-} from "./fullpage"
+
 import {
 	pugTask
 } from "./html"
@@ -48,10 +46,6 @@ const server = () => {
 		"src/js/**.js",
 		"!src/js/main.js"
 	], series(jsTask2));
-
-	watch([
-		"src/js/lib/fullpage.js"
-	], series(jsFullPageTask));
 
 	watch([
 		"src/**.pug",
