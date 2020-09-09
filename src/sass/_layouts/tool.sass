@@ -1,38 +1,54 @@
-// #block__tool
-// 	position: fixed
-// 	top: 287px
-// 	right: 20px
-// 	z-index: 99
-// 	opacity: 1
-// 	transition: ease-in-out all .3s
-// 	ul
-// 		padding: 0
-// 		list-style: none
-
-// 	li
-// 		width: 60px
-// 		height: 60px
-// 		background-color: rgb(15, 105, 171)
-// 		border-radius: 3px
-// 		border: solid 2px rgb(127, 216, 255)
-// 		margin-bottom: 10px
-// 		display: flex
-// 		align-items: center
-// 		justify-content: center
-// 		transition: .3s all ease-in-out
-// 		cursor: pointer
-// 		a
-// 			color: #fff
-// 			font-size: 30px
-// 			font-weight: 900
-
-// 	@media(min-width: 1025px)
-// 		&:hover
-// 			background-color: #fff
-// 			a
-// 				color: $main-color
-
-// 	&.active
-// 		opacity: 0
-// 		visibility: hidden
-// 		transition: .3s all ease-in-out
+#block__tool
+	position: fixed
+	top: 50%
+	right: 20px
+	z-index: 99
+	opacity: 1
+	transition: ease-in-out all .3s
+	ul
+		.tool-ctrl
+			position: relative
+			width: 50px
+			height: 50px
+			background-color: #041e3c
+			margin-bottom: 10px
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: .3s all ease-in-out
+			cursor: pointer
+			.lnr
+				color: #ddb45b
+				font-size: 20px
+			&:hover
+				.sub
+					display: block
+			.sub
+				position: absolute
+				top: -360%
+				padding: 0
+				list-style: none
+				display: none
+				li
+					width: 50px
+					height: 50px
+					background-color: #041e3c
+					margin-bottom: 10px
+					display: flex
+					align-items: center
+					justify-content: center
+					transition: .3s all ease-in-out
+					cursor: pointer
+					a
+						.lnr
+							color: #ddb45b
+							font-size: 20px
+					&:hover
+						background-image: linear-gradient( 0deg, rgb(165,122,97) 0%, rgb(233,198,141) 99%)
+						a 
+							.lnr 
+								color: #ffffff
+			&.active
+				opacity: 0
+				visibility: hidden
+				transition: .3s all ease-in-out

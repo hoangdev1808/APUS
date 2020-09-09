@@ -1,41 +1,46 @@
-// function fullpage() {
-// 	if (($(window).width() > 1280) && ('#pagepiling'.length >= 1)) {
-// 		$('#pagepiling').pagepiling({
-// 			menu: null,
-// 			direction: 'vertical',
-// 			verticalCentered: true,
-// 			sectionsColor: [],
-// 			anchors: [],
-// 			scrollingSpeed: 900,
-// 			easing: 'swing',
-// 			loopBottom: true,
-// 			loopTop: false,
-// 			css3: true,
-// 			normalScrollElements: null,
-// 			normalScrollElementTouchThreshold: 5,
-// 			touchSensitivity: 5,
-// 			keyboardScrolling: true,
-// 			sectionSelector: '.section',
-// 			animateAnchor: true,
+function fullpage() {
+	if (($(window).width() > 1280) && ('#pagepiling'.length >= 1)) {
+		$('#pagepiling').pagepiling({
+			menu: null,
+			direction: 'vertical',
+			verticalCentered: true,
+			sectionsColor: [],
+			anchors: [],
+			scrollingSpeed: 900,
+			easing: 'swing',
+			loopBottom: true,
+			loopTop: false,
+			css3: true,
+			normalScrollElements: null,
+			normalScrollElementTouchThreshold: 5,
+			touchSensitivity: 5,
+			keyboardScrolling: true,
+			sectionSelector: '.section',
+			animateAnchor: true,
 
-// 			//events
-// 			onLeave: function(index, nextIndex, direction) {
-// 				if (direction == 'down') {
-// 					$('header').addClass('active')
-// 				}
-// 			},
-// 			afterLoad: function(anchorLink, index) {
-// 			},
-// 			afterRender: function() {
-// 			},
-// 		});
-// 	}
-// 	if(('#pagepiling'.length >= 1) && ($(window).width() > 1280)){
-// 		$('body').css('overflow', 'hidden')
-// 	}else{
-// 		$('body').css('overflow', 'auto')
-// 	}
-// }
+			//events
+			onLeave: function(index, nextIndex, direction) {
+				if (direction == 'down') {
+					$('header').addClass('active')
+					// $('.logo').addClass('active')
+				}
+			},
+			afterLoad: function(anchorLink, index) {
+				if (index == 1) {
+					$('header').removeClass('active')
+					// $('.logo').removeClass('active')
+				}
+			},
+			afterRender: function() {
+			},
+		});
+	}
+	if(('#pagepiling'.length >= 1) && ($(window).width() > 1280)){
+		$('body').css('overflow', 'hidden')
+	}else{
+		$('body').css('overflow', 'auto')
+	}
+}
 const toggleMenuMobile = () => {
 	$(".toggle-menu").on("click", function() {
 		$(this).toggleClass("active");
@@ -68,18 +73,18 @@ function moveNavitem() {
 
 //Slide banner
 function EXIMMainBanner() {
-	var swiperhomebanner = new Swiper('.home-banner', {
-		loop: true,
-		speed: 1500,
-		watchSlidesProgress: true,
-		mousewheelControl: true,
-		keyboardControl: true,
-		effect: 'fade',
-		autoplay: {
-			delay: 3500,
-			disableOnInteraction: false
-		},
-	});
+		var swiperhomebanner = new Swiper('.home-banner', {
+			loop: true,
+			speed: 1500,
+			watchSlidesProgress: true,
+			mousewheelControl: true,
+			keyboardControl: true,
+			effect: 'fade',
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false
+			},
+		});
 }
 
 //Check banner
@@ -90,21 +95,21 @@ const checkLayoutBanner = () => {
 
 	if (pagesBanner.length >= 1) {
 		$('main').css('padding-top', heightHeader);
-	} else {
+	}else{
 		$('main').css('padding-top', heightHeader);
 	}
-	if (mainBanner.length >= 1) {
+	if(mainBanner.length >=1){
 		$('main').css('padding-top', 0);
 	}
 };
 
-function checkFooter() {
-	if ($('#pagepiling').length == 1) {
+function checkFooter(){
+	if($('#pagepiling').length == 1){
 		$('footer').css('display', 'none')
 	}
 }
 
-function listSlide() {
+function listSlide(){
 	var slidefiled = new Swiper('.h-3__slide .slide-filed', {
 		slidesPerView: 3,
 		spaceBetween: 30,
@@ -135,13 +140,13 @@ function listSlide() {
 	});
 }
 
-function moveBreadcrum() {
-	if ($('.global-breadcrumb').length >= 1) {
+function moveBreadcrum(){
+	if($('.global-breadcrumb').length >= 1){
 		$('main > .global-breadcrumb').appendTo('main #page-banner');
 	}
 }
 
-function Slidepage() {
+function Slidepage(){
 	var swiper = new Swiper('.history-slide .swiper-container', {
 		slidesPerView: 3,
 		spaceBetween: 30,
@@ -150,8 +155,8 @@ function Slidepage() {
 		pagination: {
 			el: '.history-slide .swiper-pagination',
 			clickable: true,
-			renderBullet: function(index, className) {
-				return '<span class="' + className + '">' + '<h3>' + (index + 2017) + '</h3>' + '</span>';
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' +'<h3>' + (index + 2017) +'</h3>' + '</span>';
 			},
 		},
 		breakpoints: {
@@ -173,44 +178,38 @@ function Slidepage() {
 			}
 		},
 	});
-	let home10Slide = new Swiper('.the-apus-home-10 .swiper-container', {
-		// slidesPerView: 3,
-		spaceBetween: 30,
-		speed: 500,
-		loop: true,
-		navigation: {
-			nextEl: '.the-apus-home-10 .button-next',
-			prevEl: '.the-apus-home-10 .button-prev',
-		},
-	});
 }
 
-function toolBout() {
-	$('#sidebar-wrapper').find('.tool-ctrl').on('click', function() {
+function toolBout(){
+	$('#sidebar-wrapper').find('.tool-ctrl').on('click', function(){
 		$('#sidebar-wrapper').find('#sideBar').slideToggle()
 	})
 }
 
-function setBackgroundElement() {
-	$("[setBackground]").each(function() {
-		var background = $(this).attr("setBackground");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-size": "cover",
-			"background-position": "center center",
-		});
-	});
-	$("[setBackgroundRepeat]").each(function() {
-		var background = $(this).attr("setBackgroundRepeat");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-repeat": "repeat",
+function coutingNumber() {
+	$('.counter').each(function() {
+		var $this = $(this),
+			countTo = $this.attr('data-count');
+		$({
+			countNum: $this.text()
+		}).animate({
+			countNum: countTo
+		}, {
+			duration: 5000,
+			easing: 'linear',
+			step: function() {
+				$this.text(Math.floor(this.countNum));
+			},
+			complete: function() {
+				$this.text(this.countNum);
+				//alert('finished');
+			}
+
 		});
 	});
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	setBackgroundElement();
 	toggleMenuMobile();
 	moveNavitem();
 	EXIMMainBanner();
@@ -220,10 +219,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	moveBreadcrum();
 	Slidepage();
 	activeHeaderWhenScroll();
-	// fullpage();
+	coutingNumber();
 	toolBout();
-	$(window).resize(function() {
-		if ($(window).width() <= 1024) {
+	fullpage();
+	$(window).resize(function(){
+		if ($(window).width() <= 1024){
 			moveNavitem();
 		}
 	})
