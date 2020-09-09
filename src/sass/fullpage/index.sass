@@ -2,14 +2,14 @@
 @media(min-width: 1025px)
 	@mixin transition($time, $property: all, $easing: ease-in)
 		transition: $property $time $easing
-	$parallax-offset: 30vh
+	$parallax-offset: 0
 	$content-offset: 30vh
 	$transition-speed: 2s
 	$slide-number: 9
 	.full-page
 		overflow: hidden
 		section
-			padding: 15vh 0
+			padding: 0 0
 			background-size: cover
 			background-repeat: no-repeat
 			background-position: center center
@@ -20,7 +20,7 @@
 			height: 100vh + $parallax-offset
 			position: fixed
 			width: 100%
-			transform: translateY(calc(100vh + 30vh))
+			transform: translateY(100vh)
 			@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1))
 			&:first-child 
 				opacity: 1
@@ -137,7 +137,7 @@
 	align-items: center
 	// background: url(/Data/Sites/1/media/bg-menu.png)
 	// background: url(../img/index-about/bg-building.png)
-	background: url(../img/index-news/bg-news.png)
+	background-image: $gradient-2
 	background-size: cover
 	background-position: center center
 	ul
@@ -154,12 +154,30 @@
 			padding: 10px
 			display: inline-block
 			font-size: 24px
-			color: #333333
+			color: #ffffff
 			opacity: 0
 			&:hover
 				text-decoration: underline
+	.main-menu
+		.register-news
+			padding: 10px
+			color: #ffffff
+			display: flex
+			align-items: center
+			justify-content: center
+			opacity: 0
+			transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+			transform: translateX(300px)
+			em 
+				padding-right: 5px
+	.social
+		display: flex
+		align-items: center
+		justify-content: center
+		li 
+			margin-right: 5px
 	.close-button
-		color: #c7931c
+		color: #ffffff
 		display: flex
 		align-items: center
 		position: absolute
@@ -174,7 +192,7 @@
 		span
 			text-transform: uppercase
 		&:hover
-			color: #c7931c
+			color: #ffffff
 	.logo-fake-header
 		position: absolute
 		top: 15vh
@@ -211,8 +229,8 @@
 			width: 100%
 			justify-content: flex-end
 			ul 
-				text-align: right
-				padding-right: 50px
+				// text-align: right
+				// padding-right: 50px
 				.item
 					position: relative
 					display: flex
@@ -231,10 +249,10 @@
 							text-decoration: underline
 						.number
 							color: rgba(#ffffff,1)
-	@media(min-width: 1200px)
-		.menu-fake-header
-			ul 
-				padding-right: 70px
+	// @media(min-width: 1200px)
+	// 	.menu-fake-header
+	// 		ul 
+				// padding-right: 70px
 	&.active
 		opacity: 1
 		pointer-events: initial
@@ -268,6 +286,10 @@
 				opacity: 1
 				transform: translateX(0)
 				// transition-delay: 1s
+		.main-menu
+			.register-news
+				opacity: 1
+				transform: translateX(0)
 @keyframes fadein
 	from
 		opacity: 0
@@ -323,15 +345,16 @@
 		font-weight: 600
 		font-size: 14px
 		padding: 5px 12px
-		background: #fff
-		color:#c7931c
+		background: #c7931c
+		color:#fff
+
 		position: relative
 		&:after
 			content: ''
 			height: calc(100% + 8px)
 			width: calc(100% + 8px)
 			position: absolute
-			border: 1px solid #fff
+			border: 1px solid #c7931c
 			top: 50%
 			left: 50%
 			transform: translate(-50%, -50%)
@@ -343,15 +366,15 @@
 			top: 50%
 			position: absolute
 			transform: translateY(-50%)  rotate(0)
-			border-top: 1px solid #fff
-	&.last
-		.open-button
-			background:#c7931c
-			color: #fff
-			&:after
-				border-color:#c7931c
-			&:before
-				border-color:#c7931c
+			border-top: 1px solid #c7931c
+	// &.last
+	// 	.open-button
+	// 		background:#c7931c
+	// 		color: #fff
+	// 		&:after
+	// 			border-color:#c7931c
+	// 		&:before
+	// 			border-color:#c7931c
 @media (max-width: 1025px)
 	#fake-header-open
 		position: fixed
@@ -375,14 +398,17 @@
 	main 
 		padding-top: 0 
 	section 
-		> div 
-			height: 100vh
-			display: flex 
-			flex-direction: column
-			justify-content: center
-			// padding: 50px 0
+		@media(min-width: 1025px)
+			
 			> div 
-				height: 100%
+				height: 100vh
+				display: flex 
+				flex-direction: column
+				justify-content: center
+				// padding: 50px 0
+				> .Module 
+					height: 100%
+					padding: 15px 0
 		&.about_home
 			.ModuleContent
 				display: flex
@@ -457,3 +483,6 @@
 			&.active
 				transform: translateY(-100%) translateX(-50%)
 
+	.h-2, .h-3, .h-4, .h-5, .the-apus-home-10, .the-apus-home-11, .the-apus-home-12, .the-apus-home-13
+		@media(min-width: 1600px)
+			padding-top: 55px

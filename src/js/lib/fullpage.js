@@ -74,11 +74,11 @@ function nextItem() {
 		$('.back-to-home').removeClass('active')
 	}
 	if (currentSlideNumber == 1) {
-		$('.full-page #fake-header-open').addClass('last')
+		$(' #fake-header-open').addClass('last')
 		$('.back-to-top').addClass('active')
 		$('.back-to-home').addClass('active')
 	} else {
-		$('.full-page #fake-header-open').removeClass('last')
+		$('#fake-header-open').removeClass('last')
 		$('.back-to-top').addClass('active')
 		$('.back-to-home').addClass('active')
 	}
@@ -95,20 +95,21 @@ function previousItem() {
 	$('section').removeClass('current-page')
 	$('footer').removeClass('active')
 	var $currentSlide = pageSlide.eq(currentSlideNumber);
+	// console.log($currentSlide)
 	$currentSlide.addClass('current-page')
-	$('.full-page #fake-header-open').removeClass('last')
+	$('#fake-header-open').removeClass('last')
 	$('.back-to-top').addClass('active')
 	$('.back-to-home').addClass('active')
 	if ($currentSlide.is(':first-child')) {
 		$('header').removeClass('active')
 		$('.back-to-top').removeClass('active')
 		$('.back-to-home').removeClass('active')
-		$('.full-page #fake-header-open').removeClass('active')
+		$('#fake-header-open').removeClass('active')
 	}
 	if (currentSlideNumber == 1) {
-		$('.full-page #fake-header-open').addClass('last')
+		$('#fake-header-open').addClass('last')
 	} else {
-		$('.full-page #fake-header-open').removeClass('last')
+		$('#fake-header-open').removeClass('last')
 	}
 
 	$currentSlide.removeClass("down-scroll").addClass("up-scroll");

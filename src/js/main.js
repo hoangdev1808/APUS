@@ -221,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	activeHeaderWhenScroll();
 	coutingNumber();
 	toolBout();
+	menuFake();
 	// fullpage();
 	$(window).resize(function() {
 		if ($(window).width() <= 1024) {
@@ -240,4 +241,9 @@ function initSlide() {
 			prevEl: '.the-apus-home-10 .button-prev',
 		},
 	});
+}
+
+function menuFake() {
+	let menu = $('header nav .header-left .main-menu')
+	menu.clone().appendTo("#fake-header .menu-fake-header")
 }

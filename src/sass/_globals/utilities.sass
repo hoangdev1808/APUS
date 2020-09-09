@@ -62,7 +62,7 @@
 		color: rgb(4, 30, 60)
 		text-transform: uppercase
 		font-weight: 400
-		margin-bottom: 20px
+		margin-bottom: 5px
 	.text 
 		position: relative
 		font-size: 44px
@@ -72,6 +72,7 @@
 		text-transform: uppercase
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
+		line-height: 1.2
 		&::after
 			position: absolute
 			background-image: linear-gradient(to right, rgba($color: #a57a61, $alpha: .6), #e9c68d)
@@ -80,15 +81,20 @@
 			content: ''
 			bottom: -20px
 			left: 0
+	// @media screen and ( max-width: 1600px)
+	// 	.text
+	// 		font-size: 40px
+	// 	h1 
+	// 		font-size: 40px
 	@media screen and ( max-width: 1440px)
 		h2 
 			font-size: 18px
-		h1 
-			font-size: 35px
+		h1 , .text
+			font-size: 30px
 	@media screen and ( max-width: 1199px)
 		h2 
 			font-size: 16px
-		h1 
+		h1 , .text
 			font-size: 26px
 .block-title
 	position: relative
