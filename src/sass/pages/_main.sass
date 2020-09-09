@@ -6,3 +6,58 @@
 @import news/_main
 @import hr/_main
 @import contact/_main
+
+// css custom 
+.full-page 
+	.h-2, .h-3, .h-4, .h-5, .the-apus-home-10, .the-apus-home-11, .the-apus-home-12, .the-apus-home-13
+		padding-top: 65px
+		&.w1920-h937
+			padding-top: 25px
+		&.w1600-h800
+			padding-top: 15px
+		&.w1366-h768
+			padding-top: 15px
+	.the-apus-home-10
+		&.w1366-h768
+			.main-slide 
+				.swiper-slide
+					height: 400px
+					.image
+						height: 360px
+						padding-top: 0
+					&.swiper-slide-active
+						// height: 400px
+						.image
+							height: 400px
+							padding-top: 0
+	.the-apus-home-11
+		&.w1366-h768
+			.product-item 
+				.image
+					width: 620px
+					height: 240px
+	.the-apus-home-12
+		&.w1920-h937
+			.view-more
+				margin-top: 15px
+		&.w1366-h768
+			padding-top: 0
+			.news-list 
+				.news-item 
+					margin-top: 20px
+					.image
+						padding-top: 50%
+					.caption
+						// margin-left: 30px
+						width: calc( 100% - 30px )
+						min-height: 110px
+						padding-left: 15px
+						padding-right: 15px
+						.name 
+							+line(2)
+							height: 42px
+							font-size: 16px
+						.view-detail
+							margin-top: 2px
+			.view-more
+				margin-top: 20px

@@ -228,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			moveNavitem();
 		}
 	})
+	checkMinitor();
 });
 
 function initSlide() {
@@ -246,4 +247,21 @@ function initSlide() {
 function menuFake() {
 	let menu = $('header nav .header-left .main-menu')
 	menu.clone().appendTo("#fake-header .menu-fake-header")
+}
+
+function checkMinitor() {
+	let widthMinitor = $(window).width()
+	console.log(widthMinitor);
+	let heightMinitor = $(window).height()
+	console.log(heightMinitor);
+
+	if (widthMinitor <= 1920 && heightMinitor <= 950) {
+		$('.full-page section').addClass('w1920-h937')
+	}
+	if (widthMinitor <= 1600 && heightMinitor <= 800) {
+		$('.full-page section').removeClass('w1920-h937').addClass('w1600-h800')
+	}
+	if (widthMinitor <= 1366 && heightMinitor <= 768) {
+		$('.full-page section').removeClass('w1600-h800').addClass('w1366-h768')
+	}
 }

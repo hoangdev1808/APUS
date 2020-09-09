@@ -69,6 +69,11 @@ header
 					color: rgb(255, 255, 255);
 					font-weight: bold;
 					text-align: center;
+				@media(max-width: 576px)
+					width: 40px
+					.hamburger-button
+						+ span 
+							display: none
 			.language
 				background-color: rgb(255, 255, 255);
 				width: 90px;
@@ -98,6 +103,8 @@ header
 						&.active
 							a 
 								color: #e1ba66
+				@media(max-width: 576px)
+					display: none
 			.main-menu
 				position: absolute
 				top: 300%
@@ -293,6 +300,8 @@ header
 				@media(max-width: 1366px)
 					width: auto
 					padding: 5px 15px
+				@media(max-width: 576px)
+					display: none
 			.btn-signup
 				background-image: linear-gradient( 0deg, rgb(165,122,97) 0%, rgb(233,198,141) 99%)
 				width: 200px
@@ -307,7 +316,8 @@ header
 				@media(max-width: 1366px)
 					width: auto
 					padding: 0 15px
-
+				@media(max-width: 576px)
+					display: none
 			.search
 				background-color: rgb(255, 255, 255)
 				width: 40px
@@ -346,3 +356,33 @@ header
 			width: 45px
 			height: 45px
 			transition: all .3s ease-in-out
+	@media(max-width: 576px)
+		nav 
+			.header-left 
+				.main-menu
+					padding: 15px
+					width: calc( 100vw - 30px )
+					height: max-content
+					.nav-bar
+						.nav-item
+							padding-bottom: 20px
+							.nav-link
+								font-size: 18px
+							&.active
+								.nav-link
+									&:before 
+										width: 15px
+										left: -25px
+									&:after 
+										width: 50px
+										right: -65px
+							&.dropdown 
+								.dropdown-menu
+									position: relative
+									left: 0
+									margin-top: 10px
+									float: none
+									height: 0
+								&:hover 
+									.dropdown-menu
+										height: 100%

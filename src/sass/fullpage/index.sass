@@ -378,8 +378,9 @@
 @media (max-width: 1025px)
 	#fake-header-open
 		position: fixed
-		transform: translateY(0) rotate(90deg)
-		display: none
+		// transform: translateY(-150px) rotate(90deg)
+		// display: none
+		right: 0
 		.open-button
 			background:#c7931c
 			color: #fff
@@ -482,7 +483,3 @@
 			transform: translateX(-50%)
 			&.active
 				transform: translateY(-100%) translateX(-50%)
-
-	.h-2, .h-3, .h-4, .h-5, .the-apus-home-10, .the-apus-home-11, .the-apus-home-12, .the-apus-home-13
-		@media(min-width: 1600px)
-			padding-top: 55px
