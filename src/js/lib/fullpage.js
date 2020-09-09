@@ -6,7 +6,7 @@ var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(nav
 var scrollSensitivitySetting = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive) 
 var slideDurationSetting = 600; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
-var pageSlide = $(".full-page section, footer");
+var pageSlide = $(".full-page section");
 var totalSlideNumber = pageSlide.length;
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
@@ -177,27 +177,6 @@ function toggleMobileHeader() {
 		$(this).toggleClass('active')
 		$('header .mobile-wrapper').toggleClass('active')
 	})
-}
-
-function mobileMapping() {
-	return {
-		'ListPage': new MappingListener({
-			selector: '.header .main-list-wrapper',
-			mobileWrapper: 'header .mobile-wrapper',
-			mobileMethod: 'appendTo',
-			desktopWrapper: 'header .logo-wrapper',
-			desktopMethod: 'insertAfter',
-			breakpoint: 1025,
-		}).watch(),
-		'Social': new MappingListener({
-			selector: '.header .social-wrapper',
-			mobileWrapper: 'header .mobile-wrapper',
-			mobileMethod: 'appendTo',
-			desktopWrapper: 'header .main-list-wrapper',
-			desktopMethod: 'insertAfter',
-			breakpoint: 1025,
-		}).watch()
-	}
 }
 
 function toggleSearchWrapper() {

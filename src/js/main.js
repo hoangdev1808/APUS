@@ -215,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// checkLayoutBanner();
 	checkFooter();
 	listSlide();
+	initSlide();
 	moveBreadcrum();
 	Slidepage();
 	activeHeaderWhenScroll();
@@ -227,3 +228,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 });
+
+function initSlide() {
+	let home10Slide = new Swiper('.the-apus-home-10 .swiper-container', {
+		// slidesPerView: 3,
+		spaceBetween: 30,
+		speed: 500,
+		// loop: true,
+		navigation: {
+			nextEl: '.the-apus-home-10 .button-next',
+			prevEl: '.the-apus-home-10 .button-prev',
+		},
+	});
+}

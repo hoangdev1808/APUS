@@ -21,7 +21,7 @@
 				</xsl:attribute>
 			</img>
 			<div class="content">
-				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+				<p><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></p>
 			</div>
 		</div>
 	</xsl:template>
