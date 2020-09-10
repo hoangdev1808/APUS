@@ -16,10 +16,10 @@
 				<div class="desc">
 					<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 				</div>
-				<a class="btn btn-viewmore" href="">
-						<xsl:attribute name="href">
+				<a class="btn btn-viewmore" href="javascript:void(0)">
+						<!-- <xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
+						</xsl:attribute> -->
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>

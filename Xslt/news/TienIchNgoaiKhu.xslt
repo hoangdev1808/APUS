@@ -4,11 +4,7 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="block-title">
-            <h2>
-                <xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of>
-            </h2>
-        </div>
+        
         <xsl:apply-templates select="/NewsList/News" mode="Bigimg"></xsl:apply-templates>
         <div class="filed-list">
             <xsl:apply-templates select="/NewsList/News" mode="Smallimg"></xsl:apply-templates>
@@ -16,13 +12,16 @@
     </xsl:template>
     <xsl:template match="News" mode="Bigimg">
         <xsl:if test="position()=1">
+			<div class="section-title-child text-center line">
+				<p>
+					<xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of>
+				</p>
+				<h1 class="name">
+					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+				</h1>
+			</div>
             <div class="desc">
-                <h1>
-                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                </h1>
-                <p>
-                    <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
-                </p>
+				<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
             </div>
             <div class="img-desc">
                 <img >
@@ -53,16 +52,16 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 right">
+						<div class="section-title-child line">
+							<p>
+								<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
+							</p>
+							<h2 class="name">
+								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+							</h2>
+						</div>
                         <div class="desc">
-                            <h4>
-                                <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-                            </h4>
-                            <h3>
-                                <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                            </h3>
-                            <p>
-                                <xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
-                            </p>
+							<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
                         </div>
                     </div>
                 </div>

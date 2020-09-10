@@ -1,4 +1,5 @@
 .the-apus-home-10
+	overflow-x: hidden
 	.list-tabs
 		display: flex
 		flex-wrap: wrap 
@@ -65,7 +66,10 @@
 		// .swiper-wrapper
 			// align-items: center
 		.image
+			background: #ffffff
 			+img-scale(390/591.4)
+			img 
+				object-fit: contain
 			&:after 
 				content: ''
 				position: absolute
@@ -76,13 +80,12 @@
 				z-index: 111
 				background: rgba(#003c63, 0.3)
 				transition: .2s ease-in-out all
-			
-				
-				
 		.swiper-slide
 			&.swiper-slide-active
 				.image
 					+img-scale(455/690)
+					img 
+						object-fit: contain
 					&:after 
 						opacity: 0
 						pointer-events: none

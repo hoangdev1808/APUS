@@ -32,10 +32,10 @@
 			<xsl:attribute name="toggle-for">
 				<xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
 			</xsl:attribute>
-			<a class=" ">
-				<xsl:attribute name="href">
+			<a class="" href="javascript:void(0)">
+				<!-- <xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute>
+				</xsl:attribute> -->
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>

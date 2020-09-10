@@ -228,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			moveNavitem();
 		}
 	})
+	tabTN();
 	checkMinitor();
 });
 
@@ -247,6 +248,19 @@ function initSlide() {
 function menuFake() {
 	let menu = $('header nav .header-left .main-menu')
 	menu.clone().appendTo("#fake-header .menu-fake-header")
+}
+
+function tabTN() {
+	let tabButton = $('.the-apus-home-10 .list-tabs li')
+	let contentTN = $('.the-apus-home-10 .box-slide')
+	tabButton.on('click', function() {
+		var dataId = $(this).attr('toggle-for')
+		tabButton.removeClass('active')
+		$(this).addClass('active')
+		contentTN.removeClass('active')
+		$('.the-apus-home-10 .box-slide[tab-id=' + dataId + ']').addClass('active')
+		initSlide();
+	})
 }
 
 function checkMinitor() {

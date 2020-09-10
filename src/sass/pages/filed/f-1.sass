@@ -52,25 +52,27 @@
 
 		width: 750px
 		margin: 0 auto
-		h1 
-			position: relative
-			font-size: 36px
-			font-family: "SFU Sigvar"
-			color: rgb(201, 163, 120)
-			text-transform: uppercase
-			line-height: 1.2
-			text-align: center
-			font-weight: 800
-			margin-bottom: 60px
-			&::after
-				position: absolute
-				background-color: rgb(201, 163, 120)
-				width: 90px
-				height: 1px
-				content: ''
-				bottom: -30px
-				left: 50%
-				transform: translateX(-50%)
+		text-align: center
+		margin-top: 30px
+		// h1 
+		// 	position: relative
+		// 	font-size: 36px
+		// 	font-family: "SFU Sigvar"
+		// 	color: rgb(201, 163, 120)
+		// 	text-transform: uppercase
+		// 	line-height: 1.2
+		// 	text-align: center
+		// 	font-weight: 800
+		// 	margin-bottom: 60px
+		// 	&::after
+		// 		position: absolute
+		// 		background-color: rgb(201, 163, 120)
+		// 		width: 90px
+		// 		height: 1px
+		// 		content: ''
+		// 		bottom: -30px
+		// 		left: 50%
+		// 		transform: translateX(-50%)
 		p 
 			text-align: center
 		@media screen and ( max-width: 1024px)
@@ -91,6 +93,8 @@
 			margin: 15px 0
 			margin-bottom: 0
 	&-list
+		.section-title-child
+			padding-bottom: 20px
 		.filed-item
 			.left
 				.img
@@ -102,39 +106,46 @@
 						object-fit: cover
 			.right
 				.desc
+					margin-top: 15px
 					width: 100%
-					padding-top: 53px
-					h4 
-						font-size: 20px
-						font-family: "Inter"
-						color: rgb(4, 30, 60)
-						text-transform: uppercase
-						text-align: left
-						margin-bottom: 30px
+					// padding-top: 53px
+					text-align: left
+					font-size: 18px
+					font-family: "Inter"
+					color: rgb(51, 51, 51)
+					text-align: justify
+					// h4 
+					// 	font-size: 20px
+					// 	font-family: "Inter"
+					// 	color: rgb(4, 30, 60)
+					// 	text-transform: uppercase
+					// 	text-align: left
+					// 	margin-bottom: 30px
 
-					h3 
-						position: relative
-						font-size: 36px
-						font-family: "SFU Sigvar"
-						color: rgb(201, 163, 120)
-						text-transform: uppercase
-						font-weight: bold
-						margin-bottom: 53px
-						&::after
-							position: absolute
-							background-color: rgb(201, 163, 120)
-							width: 90px
-							height: 1px
-							content: ''
-							bottom: -30px
-							left: 0
+					// h3 
+					// 	position: relative
+					// 	font-size: 36px
+					// 	font-family: "SFU Sigvar Demi Boli"
+					// 	color: rgb(201, 163, 120)
+					// 	text-transform: uppercase
+					// 	font-weight: bold
+					// 	margin-bottom: 53px
+					// 	&::after
+					// 		position: absolute
+					// 		background-color: rgb(201, 163, 120)
+					// 		width: 90px
+					// 		height: 1px
+					// 		content: ''
+					// 		bottom: -30px
+					// 		left: 0
 
 					p 
 						font-size: 18px
 						font-family: "Inter"
 						color: rgb(51, 51, 51)
 						text-align: justify
-
+					* + * 
+						margin-top: 15px
 			&:nth-child(1),
 			&:nth-child(3),
 			&:nth-child(5)
