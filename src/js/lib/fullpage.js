@@ -138,16 +138,13 @@ function setBackgroundElement() {
 function srcollHeaderChild() {
 	var header = $(".tuyen-dung-ct-page header, .news-detail-page header")
 	var fakeHeader = $(".tuyen-dung-ct-page #fake-header-open, .news-detail-page #fake-header-open")
-	$('.tin-tuc-page, .tuyen-dung-ct-page, .news-detail-page').scroll(function() {
-		var scroll = $('.tin-tuc-page, .tuyen-dung-ct-page, .news-detail-page').scrollTop();
-		if (scroll >= 1) {
-			header.addClass('active')
-			fakeHeader.addClass('active').addClass('last')
-		} else {
-			header.removeClass("active")
-			fakeHeader.removeClass('active')
-		}
-	});
+	var dropToggle = $('#fake-header ul.nav-bar .nav-item.dropdown .nav-link')
+	dropToggle.on('click', function(e) {
+		console.log(22)
+		e.preventDefault();
+		$(this).next('.dropdown-menu').slideToggle();
+	})
+
 }
 
 

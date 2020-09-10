@@ -55,12 +55,10 @@
 								</div>
 								<div class="main-menu">
 									<portal:modulewrapper id="mdl140" runat="server" configuremoduleid="140" />
-									<a href="" class="register-news"><em class="material-icons">mail_outline</em>Đăng ký nhận thông tin</a>
-									<ul class="social">
-										<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-										<li><a href=""><i class="fab fa-instagram"></i></a></li>
-										<li><a href=""><i class="fab fa-youtube"></i></a></li>
-									</ul>
+									<portal:ModuleWrapper ID="mdl176" runat="server" ConfigureModuleId="176" />
+
+									<portal:ModuleWrapper ID="mdl174" runat="server" ConfigureModuleId="174" />
+
 								</div>
 							</div>
 							<div class="logo">
@@ -70,9 +68,9 @@
 								<portal:modulewrapper id="mdl139" runat="server" configuremoduleid="139" />
 							</div>
 							<div class="header-right">
-								<div class="hotline"><em class="ri-phone-fill"></em>
-									<p>0928 247 247</p>
-								</div><a class="btn btn-signup" href="">Đăng kí tham quan</a>
+								<portal:ModuleWrapper ID="mdl173" runat="server" ConfigureModuleId="173" />
+								<portal:ModuleWrapper ID="mdl175" runat="server" ConfigureModuleId="175" />
+
 								<a class="search" href="javascript:void(0)"><em class="material-icons">search</em></a>
 							</div>
 						</nav>

@@ -20,20 +20,35 @@
 				text-align: justify
 				letter-spacing: -1.3px
 				
-		.btn-viewmore
-			background-color: rgb(4, 30, 60)
-			width: 150px
-			height: 50px
-			border-radius: 0
-			span
-				line-height: 50px
-				font-size: 16px
-				font-family: "Inter"
-				font-weight: bold
-				background-image: linear-gradient(to right, #8f6c5a, #bfa57b)
-				text-transform: uppercase
+		.view-more
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			background: $blue
+			width: max-content
+			// margin-left: auto 
+			// margin-right: auto 
+			margin-top: 30px
+			border: 1px solid $blue
+			transition: .2s ease-in-out all
+			a 
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 50px
+				// background: $blue 
+				min-width: 150px
+				padding: 5px 15px
+				text-align: center
+				background-image: linear-gradient(42deg, rgba(165,122,97,1) 0%, rgba(233,198,141,1) 100%)
 				-webkit-background-clip: text
 				-webkit-text-fill-color: transparent
+				font-size: 16px
+				font-weight: 800
+				text-transform: uppercase
+			&:hover 
+				background: #ffffff
+				border-color: $main
 
 	.img
 		margin-top: 57px
