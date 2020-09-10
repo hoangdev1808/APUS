@@ -6,14 +6,14 @@
 		
 	</xsl:template>
 	<xsl:template match="Zone">
-		<div class="section-title text-center line">
+		<div class="section-title text-center line animation-top">
 			<p class="white"><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></p>
 			<h2><xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of></h2>
 		</div>
-		<ul class="list-tabs">
+		<ul class="list-tabs animation-bottom">
 			<xsl:apply-templates select="News" mode="Tab"></xsl:apply-templates>
 		</ul>
-		<div class="main-slide">
+		<div class="main-slide animation-bottom">
 			<xsl:apply-templates select="News" mode="Content"></xsl:apply-templates>
 			
 			<div class="main-button">

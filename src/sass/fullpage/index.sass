@@ -400,7 +400,35 @@
 		padding-top: 0 
 	section 
 		@media(min-width: 1025px)
-			
+			.animation-left
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateX(-300px)
+			.animation-right
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateX(300px)
+			.animation-bottom
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateY(300px)
+			.animation-top
+				opacity: 0
+				transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
+				transform: translateY(-300px)
+			&.current-page
+				.animation-left
+					opacity: 1
+					transform: translateX(0)
+				.animation-right
+					opacity: 1
+					transform: translateX(0)
+				.animation-bottom
+					opacity: 1
+					transform: translateY(0)
+				.animation-top
+					opacity: 1
+					transform: translateY(0)
 			> div 
 				height: 100vh
 				display: flex 

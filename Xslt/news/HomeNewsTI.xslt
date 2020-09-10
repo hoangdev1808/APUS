@@ -5,11 +5,11 @@
 		<xsl:apply-templates select="/ZoneList/Zone[1]" mode="Zone-1"></xsl:apply-templates>
 	</xsl:template>
 	<xsl:template match="Zone" mode="Zone-1">
-		<div class="sec-title">
+		<div class="sec-title animation-top">
 			<h2><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></h2>
 			<p class="text"><xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of></p>
 		</div>
-		<div class="filed-nav">
+		<div class="filed-nav animation-bottom">
 			<ul>
 				<xsl:apply-templates select="Zone" mode="Zone-2"></xsl:apply-templates>
 				

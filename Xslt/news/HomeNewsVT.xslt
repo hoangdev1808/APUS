@@ -5,11 +5,11 @@
 		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 	</xsl:template>
 	<xsl:template match="Zone">
-		<div class="sec-title">
+		<div class="sec-title animation-top">
 			<h2><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></h2>
 			<p class="text"><xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of></p>
 		</div>
-		<div class="row">
+		<div class="row animation-bottom">
 			<div class="col-xl-8 col-md-6 pr-0">
 				<div class="img">
 					<img class=" ">

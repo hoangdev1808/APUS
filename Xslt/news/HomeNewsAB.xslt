@@ -6,13 +6,13 @@
 	</xsl:template>
 	<xsl:template match="News">
 		<div class="row">
-			<div class="col-xl-5 col-md-6 h-2__left">
+			<div class="col-xl-5 col-md-6 h-2__left animation-left">
 				<div class="sec-title">
 					<h2><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of></h2>
 					<h1 class="text"><xsl:value-of select="SubTitle" disable-output-escaping="yes"></xsl:value-of></h1>
 				</div>
 			</div>
-			<div class="col-xl-6 col-md-6 h-2__right">
+			<div class="col-xl-6 col-md-6 h-2__right animation-right">
 				<div class="desc">
 					<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 				</div>
@@ -29,7 +29,7 @@
 					<span>xem thêm</span>
 				</a>
 			</div>
-			<div class="col-xl-12">
+			<div class="col-xl-12 animation-bottom">
 				<div class="img">
 					<img class=" ">
 						<xsl:attribute name="src">

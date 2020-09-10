@@ -6,13 +6,13 @@
 	</xsl:template>
 	<xsl:template match="News">
 		<div class="row">
-			<div class="col-xl-5 col-md-6">
+			<div class="col-xl-5 col-md-6 animation-left">
 				<div class="sec-title">
 					<h2><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></h2>
 					<p class="text"><xsl:value-of select="SubTitle" disable-output-escaping="yes"></xsl:value-of></p>
 				</div>
 			</div>
-			<div class="col-xl-6 col-md-6 ml-auto">
+			<div class="col-xl-6 col-md-6 ml-auto animation-right">
 				<div class="h-2__right">
 					<div class="desc">
 						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
@@ -20,7 +20,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="list-items">
+		<div class="list-items animation-bottom">
 			<div class="full-contnet">
 				<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 			</div>

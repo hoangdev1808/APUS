@@ -6,17 +6,17 @@
 		
 	</xsl:template>
 	<xsl:template match="Zone">
-		<div class="section-title text-center line">
+		<div class="section-title text-center line animation-top">
 			<p><xsl:value-of select="/ZoneList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of></p>
 			<h2><xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of></h2>
 		</div>
-		<div class="news-list">
+		<div class="news-list animation-bottom">
 			<div class="row">
 				<xsl:apply-templates select="News"></xsl:apply-templates>
 				
 			</div>
 		</div>
-		<div class="view-more">
+		<div class="view-more animation-bottom">
 			<a class=" ">
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
