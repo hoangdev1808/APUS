@@ -72,7 +72,8 @@
 							<div class="header-right">
 								<div class="hotline"><em class="ri-phone-fill"></em>
 									<p>0928 247 247</p>
-								</div><a class="btn btn-signup" href="">Đăng kí tham quan</a><a class="search" data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;"><em class="material-icons">search</em></a>
+								</div><a class="btn btn-signup" href="">Đăng kí tham quan</a>
+								<a class="search" href="javascript:void(0)"><em class="material-icons">search</em></a>
 							</div>
 						</nav>
 					</div>
