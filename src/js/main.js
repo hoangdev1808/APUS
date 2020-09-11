@@ -57,6 +57,7 @@ const activeHeaderWhenScroll = () => {
 		} else {
 			document.querySelector("header").classList.remove("header-scrolled");
 			$('header').find('.logo').removeClass('active');
+			$('header').removeClass('active')
 		}
 	});
 }
@@ -209,6 +210,7 @@ function coutingNumber() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	AOS.init();
 	toggleMenuMobile();
 	moveNavitem();
 	EXIMMainBanner();
@@ -222,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	coutingNumber();
 	toolBout();
 	menuFake();
+	checkFullpage();
 	// fullpage();
 	$(window).resize(function() {
 		if ($(window).width() <= 1024) {
@@ -245,10 +248,17 @@ function initSlide() {
 	});
 }
 
+function checkFullpage() {
+	if ($('main').find('.full-page').length < 1) {
+		$('main').find('#fake-header-open').css('display', 'none')
+	}
+}
+
 function menuFake() {
 	let menu = $('header nav .header-left .main-menu')
 
 	menu.clone().appendTo("#fake-header .menu-fake-header")
+
 }
 
 function tabTN() {

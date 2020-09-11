@@ -12,7 +12,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Bigimg">
         <xsl:if test="position()=1">
-			<div class="section-title-child text-center line">
+			<div class="section-title-child text-center line" data-aos="fade-down" data-aos-delay="500">
 				<p>
 					<xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of>
 				</p>
@@ -20,10 +20,10 @@
 					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				</h1>
 			</div>
-            <div class="desc">
+            <div class="desc" data-aos="fade-up" data-aos-delay="500">
 				<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
             </div>
-            <div class="img-desc">
+            <div class="img-desc" data-aos="fade-up" data-aos-delay="500">
                 <img >
                     <xsl:attribute name="src">
                         <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -39,7 +39,7 @@
         <xsl:if test="position()!=1">
             <div class="filed-item">
                 <div class="row">
-                    <div class="col-xl-8 col-md-6 left">
+                    <div class="col-xl-8 col-md-6 left" data-aos="fade-left" data-aos-delay="500">
                         <div class="img">
                             <img >
                                 <xsl:attribute name="src">
@@ -51,7 +51,7 @@
                             </img>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 right">
+                    <div class="col-xl-4 col-md-6 right" data-aos="fade-right" data-aos-delay="500">
 						<div class="section-title-child line">
 							<p>
 								<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>

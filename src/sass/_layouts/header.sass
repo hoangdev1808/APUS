@@ -109,10 +109,9 @@ header
 				position: absolute
 				top: 300%
 				background-color: rgba($color: #0b2237, $alpha: .8)
-				width: 590px
-				height: 658px
-				padding: 40px 55px 40px
-				padding-right: 0
+				width: 395px
+				height:auto
+				padding: 40px 55px
 				visibility: hidden
 				opacity: 0
 				transition: all .5s ease-in-out
@@ -138,7 +137,7 @@ header
 							position: relative
 							width: max-content
 							padding: 0
-							font-size: 28px
+							font-size: 16px
 							font-family: "Inter"
 							color: rgb(255, 255, 255)
 							font-weight: bold;
@@ -158,19 +157,19 @@ header
 							&::after
 								position: absolute
 								content: ''
-								width: 60px
+								width: 40px
 								height: 1px
 								background-color: #d5ab67
 								top: 50%
-								right: -75px
+								right: -50px
 								transform: translateY(-50%)
 								visibility: hidden
 								opacity: 0
 						&.dropdown
 							.dropdown-menu
 								display: block
-								top: 0
-								left: 50%
+								top: -7px
+								left: 42%
 								visibility: hidden
 								opacity: 0
 								transition: all ease-in-out .3s
@@ -180,7 +179,7 @@ header
 								background-color: transparent
 								.dropdown-item
 									a 
-										font-size: 18px
+										font-size: 16px
 										font-family: "Inter"
 										color: rgb(255, 255, 255)
 										text-transform: uppercase
@@ -195,7 +194,7 @@ header
 
 						&:hover
 							.nav-link
-								transform: translateX(40px)
+								transform: translateX(15px)
 								transition: all .3s ease-in-out
 								color: #d5ab67
 								&::before,

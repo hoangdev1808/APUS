@@ -136,15 +136,16 @@ function setBackgroundElement() {
 }
 
 function srcollHeaderChild() {
-	var header = $(".tuyen-dung-ct-page header, .news-detail-page header")
-	var fakeHeader = $(".tuyen-dung-ct-page #fake-header-open, .news-detail-page #fake-header-open")
-	var dropToggle = $('#fake-header ul.nav-bar .nav-item.dropdown .nav-link')
-	dropToggle.on('click', function(e) {
-		console.log(22)
-		e.preventDefault();
-		$(this).next('.dropdown-menu').slideToggle();
-	})
-
+	if ($('.full-page') >= 1) {
+		var header = $(".tuyen-dung-ct-page header, .news-detail-page header")
+		var fakeHeader = $(".tuyen-dung-ct-page #fake-header-open, .news-detail-page #fake-header-open")
+		var dropToggle = $('#fake-header ul.nav-bar .nav-item.dropdown .nav-link')
+		dropToggle.on('click', function(e) {
+			console.log(22)
+			e.preventDefault();
+			$(this).next('.dropdown-menu').slideToggle();
+		})
+	}
 }
 
 
@@ -165,7 +166,6 @@ function scrollToTop() {
 		currentSlideNumber = 0
 		$('section').removeClass('down-scroll')
 		$('footer').removeClass('active')
-		$('header').removeClass('active')
 		$('.home-banner').addClass('current-page')
 	})
 }
