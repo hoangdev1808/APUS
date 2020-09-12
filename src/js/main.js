@@ -210,7 +210,11 @@ function coutingNumber() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	AOS.init();
+	AOS.init({
+		disable: "mobile",
+		duration: 1300,
+		offset: 300
+	});
 	toggleMenuMobile();
 	moveNavitem();
 	EXIMMainBanner();
