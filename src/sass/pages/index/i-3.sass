@@ -2,9 +2,25 @@
 	width: 100%
 	height: 100vh
 	background-color: rgb(245, 245, 245);
+	.sec-title
+		@media screen and ( max-width:  1600px)
+			h2 
+				font-size: 20px
+			.text
+				font-size: 30px
+	.h-2__right
+		padding-top: 40px
+		@media screen and ( max-width: 1600px)
+			padding-top: 0
+			margin-bottom: 15px
+			.desc
+				
+				p 
+					font-size: 16px
 	.list-items
 		width: 100%
 		height: 100%
+		margin-top: 20px
 		.row
 			.col-xl-2
 				position: relative
@@ -19,9 +35,9 @@
 				&:nth-child(6)
 					&::before
 						display: none
-				@media screen and ( max-width: 1440px)
+				@media screen and ( max-width: 1600px)
 					&::before
-						height: 100px
+						height: 80px
 		.item
 			text-align: center
 			.number
@@ -31,14 +47,16 @@
 					color: #003c63
 					font-weight: bold
 					text-transform: uppercase
-					@media screen and ( max-width: 1440px)
-						font-size: 35px
+					@media screen and ( max-width: 1600px)
+						font-size: 25px
 				small
 					font-size: 1.125rem
 					font-family: "Inter"
 					color: #003c63
 					font-weight: bold
 					text-transform: uppercase
+					@media screen and ( max-width: 1600px)
+						font-size: 16px
 			.desc
 				text-align: center
 				span 
@@ -47,20 +65,24 @@
 					color: #666666
 					text-transform: uppercase
 					text-align: center
+					@media screen and ( max-width: 1600px)
+						font-size: 13px
 		.img
 			margin-top: 35px
-			padding: 0 15px
 			width: 100%
-			height: 600px
+			+img-scale(600/1410)
+			padding-top: 38.32624%
 			img 
 				width: 100%
 				height: 100%
 				object-fit: cover
+			@media screen and ( max-width: 1600px)
+				padding-top: 43.32624%
 			@media screen and ( max-width: 1440px)
-				height: 550px
-				margin-top: 30px
-			@media screen and ( max-width: 1200px)
-				height: 400px
+				margin-top: 15px
+				padding-top: 40.32624%
+			@media screen and ( max-width: 1280px)
+				padding-top: 38.32624%
 			@media screen and ( max-width: 768px)
 				height: 300px
 	@media(max-width: 576px)

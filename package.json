@@ -36,6 +36,7 @@
     "del": "^5.1.0",
     "fibers": "^5.0.0",
     "graceful-fs": "^4.2.4",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-terser": "^1.4.0",
     "gulp-webfont": "0.0.1-4",
