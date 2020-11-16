@@ -1,69 +1,225 @@
-// ::-webkit-scrollbar-track 
+// ::-webkit-scrollbar-track
 // 		box-shadow      : inset 0 0 6px rgba(255, 255, 255, 0)
 // 		background-color: rgb(29, 175, 240)
-// 	
+//
 
-// 	::-webkit-scrollbar 
+// 	::-webkit-scrollbar
 // 		width           : 5px
 // 		height          : 5px
 // 		background-color: rgb(29, 175, 240)
-// 	
+//
 
-// 	::-webkit-scrollbar-thumb 
+// 	::-webkit-scrollbar-thumb
 // 		border-radius   : 2.5px
 // 		box-shadow      : inset 0 0 6px rgba(255, 255, 255, 0)
 // 		background-color: #fff
-// 	
+//
 
-.section 
+.swiper-container
+	width: 100%
+	height: 100%
+.block-title-small
+	color: #041e3c
+	font-family: Inter
+	font-size: 20 / 16 * 1rem
+	font-weight: 400
+	text-align: center
+	text-transform: uppercase
+.block-title-big
+	h2
+		background-image: linear-gradient(to right, rgba(165, 122, 97, 0.6) 0%, rgba(233, 198, 141, 0) 100%)
+		background-clip: text
+		color: #c9a378
+		font-family: "SFU Sigvar Demi Bold"
+		font-size: 36 / 16 * 1rem
+		font-weight: 400
+		text-align: center
+		text-transform: uppercase
+.viewlink
+	color: #e9c68d
+	font-family: Inter
+	font-size: 10 / 16 * 1rem
+	font-weight: 500
+	text-transform: uppercase
+	letter-spacing: 1px
+	transition: .3s all  ease-in-out
+	display: inline-block
+	*
+		color: #e9c68d
+		font-family: Inter
+		font-size: 10 / 16 * 1rem
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 1px
+		transition: .3s all  ease-in-out
+		display: inline-block
+	&:hover
+		transform: translateY(-3px)
+		color: #e9c68d
+.box-post-tin
+	position: relative
+	padding-bottom: 50px
+	margin-top: 30px
+	&:hover
+		img
+			transform: scale(1.05)
+	.img
+		a
+			+img-ratio(270/450)
+			img
+
+				transition: .3s all  ease-in-out
+	.wrap-text
+		width: calc( 100% - 50px )
+		height: 130px
+		padding: 15px 10px 13px 29px
+		position: absolute
+		right: 0
+		bottom: 0px
+		background:  url('../assets/images/tin-tuc/bg-wrap-text.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+	&::after
+		clear: both
+		content: ''
+		display: table
+	.title
+		margin-bottom: 10px
+		*
+			color: #041e3c
+			font-family: Inter
+			font-size: 18 / 16 * 1rem
+			font-weight: 700
+			text-align: left
+			line-height: 1.4
+			transition: .3s all  ease-in-out
+			+rgtext(2)
+			&:hover
+				color: $main-hover
+	.date
+		color: #999999
+		font-family: Inter
+		font-size: 12 / 16 * 1rem
+		font-weight: 400
+		letter-spacing: 1.2px
+		margin-bottom: 5px
+		display: block
+
+.filed-nav
+	width: 100%
+	ul
+		display: flex
+		align-items: center
+		padding-left: 0
+		justify-content: center
+		list-style: none
+		margin-bottom: 67px
+		@media screen and ( max-width: 992px )
+			margin-bottom: 30px
+			flex-wrap: wrap
+			border-right: 2px solid #ffffff
+
+
+		li
+			background-color: #041e3c
+			width: 240px
+			height: 60px
+			border-top: solid 2px #fff
+			line-height: 60px
+			text-align: center
+			@media screen and ( max-width: 992px )
+				flex: 0 0 50%
+				border-left: solid 2px #fff
+			a
+				padding: 20px 30px
+				font-size: 16px
+				font-family: "Inter"
+				color: #e3b85c
+				font-weight: bold
+				text-transform: uppercase
+				display: flex
+				width: 100%
+				height: 100%
+				align-items: center
+				justify-content: center
+			&+li
+				border-left: solid 2px #fff
+			&.active
+				background-image: linear-gradient( 0deg, rgb(165,122,97) 0%, rgb(233,198,141) 99%)
+				a
+					color: #fff
+			@media screen and ( max-width: 575px)
+				width: auto
+				padding: 0 15px
+				a
+					padding: 0
+					font-size: 14px
+// NEW CSS
+html
+	@media screen and ( max-width: 1024px )
+		font-size: 16px
+	@media screen and ( max-width: 768px )
+		font-size: 15px
+	@media screen and ( max-width: 575px )
+		font-size: 14px
+.section
 	margin-left: auto
 	padding: 30px 0
 
-	@media (min-width: 768px) 
+	@media (min-width: 768px)
 		padding: 35px 0
-	
 
-	@media (min-width: 1025px) 
+	@media (min-width: 1025px)
 		padding: 40px 0
-	
 
-	@media (min-width: 1200px) 
+	@media (min-width: 1200px)
 		padding: 50px 0
-	
 
-	@media (min-width: 1438px) 
+	@media (min-width: 1438px)
 		padding: 80px 0
 .section-child
 	margin-left: auto
 	padding: 20px 0
 
-	@media (min-width: 600px) 
+	@media (min-width: 600px)
 		padding: 30px 0
-	
 
-	@media (min-width: 768px) 
+	@media (min-width: 768px)
 		padding: 35px 0
-	
 
-	@media (min-width: 1025px) 
+	@media (min-width: 1025px)
 		padding: 40px 0
-	
 
-	@media (min-width: 1200px) 
+	@media (min-width: 1200px)
 		padding: 50px 0
-	
 
-	@media (min-width: 1440px) 
+	@media (min-width: 1440px)
 		padding: 66px 0
 .sec-title
-	h2 
+	&.center
+		text-align: center
+		.text
+			&::after
+				left: 50%
+				transform: translateX(-50%)
+	h2
 		font-size: 24px
 		font-family: "Inter"
 		color: rgb(4, 30, 60)
 		text-transform: uppercase
 		font-weight: 400
 		margin-bottom: 5px
-	.text 
+	.title
+		*
+			font-size: 30px
+			background-image: linear-gradient(to right, #bb9667, #e2bd6c)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #c9a378
+			font-family: "SFU Sigvar Demi Bold"
+			font-weight: 400
+	.text
 		position: relative
 		font-size: 44px
 		font-weight: bold
@@ -84,21 +240,21 @@
 	@media screen and ( max-width: 1600px)
 		.text
 			font-size: 30px
-		h1 
+		h1
 			font-size: 30px
 	@media screen and ( max-width: 1440px)
-		h2 
+		h2
 			font-size: 18px
 		h1 , .text
 			font-size: 30px
 	@media screen and ( max-width: 1199px)
-		h2 
+		h2
 			font-size: 16px
 		h1 , .text
 			font-size: 26px
 .block-title
 	position: relative
-	h2 
+	h2
 		font-size: 30px
 		font-family: "Inter"
 		color: rgb(51, 51, 51)
@@ -112,24 +268,24 @@
 	@media screen and ( max-width: 1440px)
 		&::before
 			height: 25px
-.pages 
+.pages
 	margin-left: auto
 	width: 100%
 
-	.modulepager 
+	.modulepager
 		display: flex
 		align-items: center
 		justify-content: center
 
-		.pagination 
+		.pagination
 			padding: 0
 			list-style: none
 
-			li 
-				background-color: rgb(255, 255, 255);
-				box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-				width: 40px;
-				height: 40px;
+			li
+				background-color: rgb(255, 255, 255)
+				box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
+				width: 40px
+				height: 40px
 				margin-right: 20px
 				display: flex
 				align-items: center
@@ -137,34 +293,31 @@
 				cursor: pointer
 				transition: ease-in-out all .3s
 
-				a 
+				a
 					font-size: 18px
 					color: $main-color
 					text-decoration: none
 					font-family: 'Montserrat'
-				
 
-				&:hover 
+				&:hover
 					background-color: $main-color
-					a 
+					a
 						color: #fff
-					
-				
 
-				&.active 
+				&.active
 					background-color: $main-color
 					span,
 					a
 						color: #fff
-.tab-panels 
-	ul 
+.tab-panels
+	ul
 		padding: 0
 		list-style: none
 		display: flex
 		align-items: center
 
-		li 
-			a 
+		li
+			a
 				cursor: pointer
 				display: inline-block
 				font-size: 16px
@@ -173,14 +326,11 @@
 				text-transform: uppercase
 				text-align: left
 				font-weight: 400
-			
 
-			@media(max-width: 991.98px) 
+			@media(max-width: 991.98px)
 				width: auto
-			
-		
 
-		&.active 
+		&.active
 			font-size: 16px
 			font-family: "Montserrat"
 			color: rgb(51, 51, 51)
@@ -190,7 +340,7 @@
 			transition: all .3s ease-in-out
 			position: relative
 
-			&::after 
+			&::after
 				position: absolute
 				content: ''
 				width: 100%
@@ -198,33 +348,28 @@
 				background-color: $main-color
 				left: 0
 				bottom: -1.5px
-			
-		
-	
 
-	.panel 
+	.panel
 		background: #fff
 		padding: 30px
 		display: none
 
-		.panel__title 
-			p 
+		.panel__title
+			p
 				font-size: 18px
 				font-family: "Barlow"
 				color: rgb(51, 51, 51)
 				font-weight: bold
-			
-		
 
-		.panel__slide 
+		.panel__slide
 			position: relative
 
-			.panel-slide 
+			.panel-slide
 				max-width: 1020px
 				margin: 40px auto
 				cursor: pointer
 
-				.panel__img 
+				.panel__img
 					border: solid 1px rgb(234, 234, 234)
 					background-color: rgb(255, 255, 255)
 					height: 200px
@@ -234,66 +379,54 @@
 					justify-content: center
 					transition: all .3s ease-in-out
 
-					&:hover 
+					&:hover
 						border: solid 1px #0065b3
 						transition: all .3s ease-in-out
-					
-				
 
-				@media(max-width: 991.98px) 
+				@media(max-width: 991.98px)
 					max-width: 100%
 
-					.panel__img 
+					.panel__img
 						max-width: 100%
-					
-				
-			
-		
 
-		.panel__desc 
+		.panel__desc
 			max-width: 1020px
 			margin: 0 auto
 			padding-bottom: 50px
 			text-align: center
 
-			p 
+			p
 				font-size: 18px
 				font-weight: 400
 				line-height: 24px
 				font-family: "Barlow"
 				color: rgb(51, 51, 51)
-			
 
-			ul 
+			ul
 				padding: 0
 				list-style: none
 
-				li 
+				li
 					width: 100%
 					display: flex
 					margin-bottom: 16px
 					padding: 0
 
-					p 
+					p
 						font-size: 16px
 						color: rgb(51, 51, 51)
 						font-weight: 600
-					
 
-					span 
+					span
 						font-size: 16px
 						color: rgb(51, 51, 51)
-					
-				
-			
-		
 
-		.panel__list 
+		.panel__list
 			max-width: 1020px
 			margin: 0 auto
 			padding: 0 10px
 
-			.item 
+			.item
 				border: solid 1px rgb(234, 234, 234)
 				width: 256px
 				height: 255px
@@ -302,61 +435,47 @@
 				justify-content: center
 				padding: 0
 
-				@media screen and (max-width: 1025px) 
+				@media screen and (max-width: 1025px)
 					width: 100%
-				
-			
 
-			@media screen and (max-width: 1025px) 
+			@media screen and (max-width: 1025px)
 				max-width: 100%
-			
-		
 
-		@media(max-width: 991.98px) 
+		@media(max-width: 991.98px)
 			padding: 15px
 
-			.panel__slide 
-				.panel-slide 
+			.panel__slide
+				.panel-slide
 					max-width: 100%
 					margin: 10px auto
-				
-			
 
-			.panel__desc 
+			.panel__desc
 				max-width: 100%
 				text-align: justify
 				padding-bottom: 10px
 
-				p 
+				p
 					font-size: 14px
-				
-			
-		
 
-		&.active 
+		&.active
 			display: block
-.acc 
+.acc
 	width: 100%
 
-	.acc__card 
+	.acc__card
 		position: relative
-	
 
-	.acc__title 
-		&.active 
-			h2 
-				.material-icons 
+	.acc__title
+		&.active
+			h2
+				.material-icons
 					transform: rotate(180deg)
 					transition: all ease-in-out .3s
-				
-			
-		
-	
 
-	.acc__panel 
+	.acc__panel
 		display: none
 		margin: 0
-.searchbox 
+.searchbox
 	position: relative
 	width: 100%
 	height: 100vh
@@ -366,18 +485,18 @@
 	transition: all .7s
 	background-color: transparent
 
-	.content 
+	.content
 		position: relative
 		height: 100vh
 
-		.form-group 
+		.form-group
 			width: 100%
 			position: absolute
 			top: 50%
 			left: 50%
 			transform: translate(-50%, -50%)
 
-			.form-control 
+			.form-control
 				width: 100%
 				background-color: transparent
 				border: none
@@ -386,64 +505,54 @@
 				color: #fff
 				font-size: 50px
 
-				&:focus 
+				&:focus
 					outline: none
 					box-shadow: none
-				
 
-				&::placeholder 
+				&::placeholder
 					color: #fff
-				
+
 				@media screen and ( max-width: 1024px)
 					font-size: 25px
-				
+
 				@media screen and ( max-width: 375px)
 					font-size: 15px
-				
-			
 
-			.searchbutton 
+			.searchbutton
 				position: absolute
 				right: 0
 				top: 50%
 				transform: translateY(-50%)
 
-				.material-icons 
+				.material-icons
 					font-size: 50px
 					color: #fff
 					@media screen and ( max-width: 1024px)
 						font-size: 25px
-					
-				
-			
-		
-	
 
-	input 
+	input
 		transform: translateY(-50px)
 		opacity: 0
 		transition-property: transform, opacity
 		transition-duration: .4s
-	
 
-	button 
+	button
 		transform: translateY(-50px)
 		opacity: 0
 		transition-property: transform, opacity
 		transition-duration: .4s
-	
-.fancybox-slide--current 
-	.searchbox 
+
+.fancybox-slide--current
+	.searchbox
 		transform: translateY(0)
 		opacity: 1
 
-		input 
+		input
 			transform: translateY(0)
 			opacity: 1
 			transition-delay: .1s
-		
 
-		button 
+		button
 			transform: translateY(0)
 			opacity: 1
 			transition-delay: .3s
@@ -486,15 +595,15 @@
 	padding: 30px 0
 	.tool-ctrl
 		display: none
-	ul 
+	ul
 		list-style: none
-		li 
+		li
 			margin-bottom: 20px
-			a 
+			a
 				font-size: 16px
 				font-family: "Montserrat"
 				text-align: left
 				color: #333333
 			&.active
-				a 
+				a
 					color: #1a77ba

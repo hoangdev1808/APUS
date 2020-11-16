@@ -1,0 +1,33 @@
+section.tin-tuc(setBackground="./assets/images/tin-tuc/bg-tin-tuc.png")
+	.filed-nav
+			ul
+				li.active
+					a(href="tien-ich-noi-khu.html") Tiện ích nội khu
+				li
+					a(href="tien-ich-ngo-khu.html") Tiện ích ngoại khu
+	.wrap-tin-tuc-2
+		.container
+			.sec-title.center
+				h2 Tin tức
+				h1.text Tin dự án the apus
+			.wrap-box-post
+				.row 
+					-for(i=0;i<6;i++)
+						.col-xl-4.col-md-6
+							.box-post-tin
+								.img
+									a(href="")
+										img(src="./assets/images/tin-tuc/tt-1.png", alt="")
+								.wrap-text 
+									span.date 07.07.2020
+									.title
+										a(href="") The Apus – tâm điểm đầu tư xứng tầm tại Phước Hải
+									a(href="").viewlink Xem chi tiết 
+		ul.pagination
+					li.active
+						a(href="#") 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3
+

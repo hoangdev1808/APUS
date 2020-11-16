@@ -1,0 +1,57 @@
+.mat-bang-3
+	.wrap-box-mb
+		margin-top: 55px
+		.img
+			a
+				width: auto
+				height: 310px
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+	.wrap-text
+		p
+			color: #041e3c
+			font-family: "SFU Sigvar Demi Bold"
+			font-size: 18px
+			font-weight: 400
+			text-transform: uppercase
+			display: block
+			text-align: center
+			margin-top: 15px
+	.wrap-table
+		margin-top: 60px
+		table
+			width: 100%
+			margin-bottom: 30px
+			border-top: 1px solid #145182
+			tr
+				@media screen and ( max-width: 575px )
+					display: flex
+					align-items: center
+					flex-wrap: wrap
+				&+tr
+					border-top: 1px solid #e1e1e1
+					@media screen and ( max-width: 575px )
+						margin-top: 30px
+				td
+					padding-left: 30px
+					height: 59px
+					@media screen and ( max-width: 575px )
+						flex: 0 0 100%
+						display: flex
+						align-items: center
+					&:first-child
+						background-color: #041e3c
+						color: #ffffff
+						font-family: Inter
+						font-size: 18 / 16 * 1rem
+						font-weight: 700
+						width: 240px
+
+					&:last-child
+						background-color: #fff
+						color: #333333
+						font-family: Inter
+						font-size: 18 / 16 * 1rem
+						font-weight: 500

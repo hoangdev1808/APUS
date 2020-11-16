@@ -3,16 +3,48 @@ button
 	&:focus
 		outline: none
 		box-shadow: none
-	
 
-.btn 
+.pagination
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: 30px
+	li
+		&.active
+			a
+				background-color: #041e3c
+				color: $main-hover
+				order: 1px solid #041e3c
+		a,span
+			width: 40px
+			height: 40px
+			border: 1px solid #e1e1e1
+			background-color: #ffffff
+			color: #041e3c
+			font-family: Inter
+			font-size: 16 / 16 * 1rem
+			font-weight: 800
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 1.6px
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: .3s all  ease-in-out
+			&:hover
+				background-color: #041e3c
+				color: $main-hover
+				order: 1px solid #041e3c
+		&+li
+			margin-left: 20px
+.btn
 	border: 0
 	padding: 0
 	&:focus
 		outline: none
 		box-shadow: none
-	
-	&__new 
+
+	&__new
 		font-size: 14px
 		font-family: "Montserrat"
 		color: rgb(255, 255, 255)
@@ -31,13 +63,11 @@ button
 				font-size: 14px
 				line-height: 20px
 				padding-left: 10px
-			
-		
-		@media(max-width: 991.98px) 
+
+		@media(max-width: 991.98px)
 			width: 120px
 			font-size: 14px
-		
-	
+
 	&__new2
 		width: 190px
 		height: 40px
@@ -84,8 +114,3 @@ button
 		@media screen and ( max-width: 1440px)
 			width: 160px
 			height: 40px
-
-
-
-
-
