@@ -15,22 +15,25 @@
                     <xsl:text>nav-item active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
-			<xsl:if test="ZoneId=83">
-				<xsl:attribute name="class">
-					<xsl:text>nav-item dropdown</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
-			<xsl:if test="ZoneId=88">
-				<xsl:attribute name="class">
-					<xsl:text>nav-item dropdown</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
+            <xsl:if test="ZoneId=83">
+                <xsl:attribute name="class">
+                    <xsl:text>nav-item dropdown</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="ZoneId=88">
+                <xsl:attribute name="class">
+                    <xsl:text>nav-item dropdown</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <a class="nav-link">
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url"></xsl:value-of>
                 </xsl:attribute>
                 <xsl:attribute name="title">
                     <xsl:value-of select="Title"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="target">
+                    <xsl:value-of select="Target"></xsl:value-of>
                 </xsl:attribute>
                 <xsl:value-of select="Title"></xsl:value-of>
             </a>
@@ -41,7 +44,7 @@
                             <xsl:apply-templates select="Zone" mode="Dropdown"></xsl:apply-templates>
                         </ul>
                     </xsl:when>
-					<xsl:when test="ZoneId=88">
+                    <xsl:when test="ZoneId=88">
                         <ul class="dropdown-menu">
                             <xsl:apply-templates select="Zone" mode="Dropdown2"></xsl:apply-templates>
                         </ul>
@@ -68,7 +71,7 @@
             </a>
         </li>
     </xsl:template>
-	 <xsl:template match="Zone" mode="Dropdown2">
+    <xsl:template match="Zone" mode="Dropdown2">
         <li class="dropdown-item">
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
