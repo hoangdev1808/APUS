@@ -257,12 +257,23 @@ function setBackgroundElement() {
 		});
 	});
 }
+const mainSearch = () => {
+	$("#search-icon").click(function () {
+		$(".search-wrap").css("left", "0");
+		$("body").addClass("disabled");
+	});
+	$(".close-btn").click(function () {
+		$(".search-wrap").css("left", "-100%");
+		$("body").removeClass("disabled");
+	});
+};
 document.addEventListener("DOMContentLoaded", () => {
 	AOS.init({
 		disable: "mobile",
 		duration: 1300,
 		offset: 300,
 	});
+	mainSearch();
 	toggleMenuMobile();
 	moveNavitem();
 	setBackgroundElement();

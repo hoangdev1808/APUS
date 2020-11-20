@@ -74,5 +74,14 @@ header
 					em.ri-phone-fill
 					p 0928 247 247
 				a.btn.btn-signup(href="") Đăng kí tham quan
-				a.search(data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;")
+				a.search#search-icon
 					em.material-icons search
+	.search-wrap
+		.search-middle
+			.close-btn X
+			.wrap-button
+				input.form-control.search-t(type='text' placeholder='Tìm kiếm...')
+				button.button-search
+					span.material-icons
+						| search
+	.overlay
