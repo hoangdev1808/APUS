@@ -108,6 +108,11 @@
 
 .filed-nav
 	width: 100%
+	position: sticky
+	top: 70px
+	z-index: 99
+	@media screen and ( max-width: 1024px )
+		top: 0px
 	ul
 		display: flex
 		align-items: center
@@ -119,8 +124,6 @@
 			margin-bottom: 30px
 			flex-wrap: wrap
 			border-right: 2px solid #ffffff
-
-
 		li
 			background-color: #041e3c
 			width: 240px

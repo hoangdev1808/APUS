@@ -267,6 +267,34 @@ const mainSearch = () => {
 		$("body").removeClass("disabled");
 	});
 };
+const clickScrollTo = () => {
+	$("a").on("click", function (event) {
+		console.log(this.hash);
+		if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			const TopDesktop =
+				$(hash).offset().top - 71 - $(".filed-nav").outerHeight();
+			const TopMobile =
+				$(hash).offset().top - $(".filed-nav").outerHeight();
+			if ($(window).width() >= 1024) {
+				$("html, body").animate(
+					{
+						scrollTop: TopDesktop,
+					},
+					300
+				);
+			} else {
+				$("html, body").animate(
+					{
+						scrollTop: TopMobile,
+					},
+					300
+				);
+			}
+		} // End if
+	});
+};
 document.addEventListener("DOMContentLoaded", () => {
 	AOS.init({
 		disable: "mobile",
@@ -276,6 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	mainSearch();
 	toggleMenuMobile();
 	moveNavitem();
+	clickScrollTo();
 	setBackgroundElement();
 	EXIMMainBanner();
 	// checkLayoutBanner();
