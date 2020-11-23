@@ -169,24 +169,26 @@
 			.nav-item
 				&.dropdown
 					.dropdown-menu
-						display: block
+						display: none
 						position: relative
 						top: 0
 						float: none
 						background: none
-						height: 0px
-						transition: .2s ease-in-out all
+						height: auto
 						overflow: hidden
 						border: none
 						margin: 0
 						padding: 0
+						width: fit-content
+						margin: 0 auto
+						background-color: rgba(0,0,0,0.1)
 						.dropdown-item
 							background: none
 							&:hover
 								background: none
-					&.active
-						.dropdown-menu
-							height: 100%
+					// &.active
+					// 	.dropdown-menu
+					// 		height: 100%
 	.main-menu
 		.register-news
 			padding: 10px

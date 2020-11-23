@@ -301,11 +301,6 @@ const clickScrollTo = () => {
 		} // End if
 	});
 };
-const clickMenuMobile = () => {
-	$("#ngulonx").click(function () {
-		alert("asdsa");
-	});
-};
 document.addEventListener("DOMContentLoaded", () => {
 	AOS.init({
 		disable: "mobile",
@@ -338,7 +333,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	tabTN();
 	checkMinitor();
-	clickMenuMobile();
 });
 
 function initSlide() {
