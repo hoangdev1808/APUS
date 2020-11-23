@@ -22,15 +22,15 @@
 			width: 100%
 			transform: translateY(100vh)
 			@include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1))
-			&:first-child 
+			&:first-child
 				opacity: 1
 				transform: translateY(-$parallax-offset / 2)
 	@for $i from 1 to ($slide-number + 1)
 		.full-page section:nth-child(#{$i})
-			// z-index: ($slide-number + 1) - $i 
-			z-index: ($slide-number + 1) - $i 
+			// z-index: ($slide-number + 1) - $i
+			z-index: ($slide-number + 1) - $i
 			z-index: $i
-	section.up-scroll 
+	section.up-scroll
 		transform: translate3d(0,-$parallax-offset / 2,0)
 		+ section
 			transform: translate3d(0,(100vh + $parallax-offset),0)
@@ -71,9 +71,9 @@
 				color: #fff
 				transform: scale(1.8)
 			&.active
-				
+
 				background:#c7931c
-@-webkit-keyframes wheel 
+@-webkit-keyframes wheel
 	0%
 		opacity: 0
 		transform: scale(.3)
@@ -81,7 +81,7 @@
 	50%
 		opacity: 1
 		transform: scale(1)
-	100% 
+	100%
 		opacity: 0
 		transform: scale(.3)
 		top: 20px
@@ -123,6 +123,13 @@
 			width: 50%
 			transform: skewY(-30deg)
 #fake-header
+	.main-menu > a
+		text-align: center
+		display: flex
+		align-items: center
+		justify-content: center
+		color: white
+		transition: .1s ease-in-out all
 	position: fixed
 	top: 0
 	transition: .1s ease-in-out all
@@ -144,7 +151,7 @@
 		list-style: none
 		padding-left: 0
 		text-align: center
-		li 
+		li
 			opacity: 0
 			transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
 			transform: translateX(300px)
@@ -166,20 +173,20 @@
 						position: relative
 						top: 0
 						float: none
-						background: none 
-						// height: 0px
+						background: none
+						height: 0px
 						transition: .2s ease-in-out all
 						overflow: hidden
-						border: none 
+						border: none
 						margin: 0
 						padding: 0
 						.dropdown-item
-							background: none 
-							&:hover 
+							background: none
+							&:hover
 								background: none
-					// &.active
-					// 	.dropdown-menu
-					// 		height: 100%
+					&.active
+						.dropdown-menu
+							height: 100%
 	.main-menu
 		.register-news
 			padding: 10px
@@ -190,13 +197,13 @@
 			opacity: 0
 			transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
 			transform: translateX(300px)
-			em 
+			em
 				padding-right: 5px
 	.social
 		display: flex
 		align-items: center
 		justify-content: center
-		li 
+		li
 			margin-right: 5px
 	.close-button
 		color: #ffffff
@@ -208,6 +215,7 @@
 		cursor: pointer
 		right: 20px
 		transition: .4s cubic-bezier(0.22, 0.44, 0, 1) all
+		z-index: 999
 		em
 			font-size: 36px
 			margin-right: 10px
@@ -223,10 +231,10 @@
 		transition: 2s all cubic-bezier(0.22, 0.44, 0, 1)
 		transform: translateY(300px)
 	.menu-fake-header
-		ul 
+		ul
 			.item
-				a 
-				span 
+				a
+				span
 					display: none
 	.menu-fake-header
 		.Module-141
@@ -243,14 +251,14 @@
 			position: initial
 			top: initial
 			z-index: 21
-			// img 
+			// img
 			//     height: 121px
 		.menu-fake-header
 			position: absolute
 			z-index: 11
 			width: 100%
 			justify-content: flex-end
-			ul 
+			ul
 				// text-align: right
 				// padding-right: 50px
 				.item
@@ -267,13 +275,13 @@
 						padding-left: 25px
 						color: rgba(#ffffff,0.5)
 					&.active, &:hover
-						a 
+						a
 							text-decoration: underline
 						.number
 							color: rgba(#ffffff,1)
 	// @media(min-width: 1200px)
 	// 	.menu-fake-header
-	// 		ul 
+	// 		ul
 				// padding-right: 70px
 	&.active
 		opacity: 1
@@ -281,8 +289,8 @@
 		.logo-fake-header
 			opacity: 1
 			transform: translateX(0)
-		ul 
-			li 
+		ul
+			li
 				opacity: 1
 				transform: translateX(0)
 				&:nth-child(2)
@@ -301,7 +309,7 @@
 					transition-delay: .8s
 				&:nth-child(9)
 					transition-delay: .9s
-			a 
+			a
 				opacity: 1
 		.menu-fake-header
 			.Module-141
@@ -418,9 +426,9 @@
 			a
 				font-size: 16px
 .full-page
-	main 
-		padding-top: 0 
-	section 
+	main
+		padding-top: 0
+	section
 		@media(min-width: 1025px)
 			.animation-left
 				opacity: 0
@@ -451,13 +459,13 @@
 				.animation-top
 					opacity: 1
 					transform: translateY(0)
-			> div 
+			> div
 				height: 100vh
-				display: flex 
+				display: flex
 				flex-direction: column
 				justify-content: center
 				// padding: 50px 0
-				> .Module 
+				> .Module
 					height: 100%
 					padding: 15px 0
 		&.about_home
@@ -473,8 +481,8 @@
 						align-content: center
 		&.project_city
 			.swiper-container
-				.swiper-wrapper .swiper-slide 
-					.img 
+				.swiper-wrapper .swiper-slide
+					.img
 						width: 100%
 						height: 100vh
 						img
@@ -486,9 +494,9 @@
 				justify-content: center
 				align-items: center
 		&.video
-			.figure-media .figure-image .wrapper 
+			.figure-media .figure-image .wrapper
 				height: 100vh
-				a 
+				a
 					padding-top: 100%
 					img
 						height: 100vh
@@ -504,8 +512,8 @@
 						padding-top: 0
 			&.project_city
 				.swiper-container
-					.swiper-wrapper .swiper-slide 
-						.img 
+					.swiper-wrapper .swiper-slide
+						.img
 							width: 100%
 							height: auto
 							padding-top: 56.25%
@@ -516,9 +524,9 @@
 								left: 0
 								width: 100%
 			&.video
-				.figure-media .figure-image .wrapper 
+				.figure-media .figure-image .wrapper
 					height: auto
-					a 
+					a
 						background: #000
 						img
 							opacity: 0.8

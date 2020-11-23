@@ -240,6 +240,7 @@ const SlideN = () => {
 		},
 	});
 };
+
 function setBackgroundElement() {
 	$("[setBackground]").each(function () {
 		var background = $(this).attr("setBackground");
@@ -273,6 +274,11 @@ const clickScrollTo = () => {
 		if (this.hash !== "") {
 			event.preventDefault();
 			var hash = this.hash;
+			$(this)
+				.parent()
+				.addClass("active")
+				.siblings()
+				.removeClass("active");
 			const TopDesktop =
 				$(hash).offset().top - 71 - $(".filed-nav").outerHeight();
 			const TopMobile =
@@ -293,6 +299,11 @@ const clickScrollTo = () => {
 				);
 			}
 		} // End if
+	});
+};
+const clickMenuMobile = () => {
+	$("#ngulonx").click(function () {
+		alert("asdsa");
 	});
 };
 document.addEventListener("DOMContentLoaded", () => {
@@ -327,6 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	tabTN();
 	checkMinitor();
+	clickMenuMobile();
 });
 
 function initSlide() {
