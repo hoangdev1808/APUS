@@ -613,7 +613,7 @@ html
 				a
 					color: #1a77ba
 .search-page
-	padding: 60px 0
+	padding: 100px 0
 	.search-page-top
 		.page-header
 			h1
@@ -639,7 +639,6 @@ html
 
 					.seachpage-btn
 						display: none
-
 	.searchresults
 		.modulepager
 			display: flex
@@ -647,45 +646,6 @@ html
 			padding-bottom: 30px
 			&:nth-child(1)
 				display: none
-
-			.pagination
-				padding: 0
-				list-style: none
-
-				li
-					background-color: rgb(255, 255, 255)
-					width: 38px
-					height: 38px
-					margin-right: 20px
-					display: flex
-					align-items: center
-					justify-content: center
-					cursor: pointer
-					transition: ease-in-out all .3s
-
-					a
-						font-size: 18px
-						color: $main-color
-						text-decoration: none
-						width: 100%
-						height: 100%
-						text-align: center
-						line-height: 38px
-
-					&:hover
-						background-color: $main-color
-
-						a
-							color: #fff
-
-					&.active
-						span
-							color: #fff
-							width: 100%
-							height: 100%
-							text-align: center
-							line-height: 38px
-							background-color: $main-color
 	.searchresultlist
 		.searchresult
 			.NeatHtml
@@ -694,5 +654,53 @@ html
 					a
 						font-size: 20px
 						font-weight: 500
-						color: $main-color
+						color: #d4ad5a
 						text-decoration: none
+						&:hover
+							text-decoration: underline
+// Css
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized .tooltipster-box
+	background: #fff
+	border: 1px solid #e1e1e1
+	border-radius: 0
+	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.4)
+	.figcaption
+		padding-top: 10px
+		p
+			color: #041e3c
+			font-size: 14/16*1rem
+			text-align: center
+			font-weight: 700
+			text-transform: uppercase
+figure
+	position: relative
+figcaption
+	position: absolute
+	left: 50%
+	-webkit-transform: translateX(-50%) /* Safari iOS */
+	transform: translateX(-50%)
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized .tooltipster-content
+	color: blue
+	padding: 8px
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-top .tooltipster-arrow-border
+	display: none
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-top .tooltipster-arrow-background
+	display: none
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-bottom .tooltipster-arrow-border
+	display: none
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-bottom .tooltipster-arrow-background
+	display: none
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-left .tooltipster-arrow-border
+	display: none
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-left .tooltipster-arrow-background
+	display: none
+
+.tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-right .tooltipster-arrow-border
+	display: none
