@@ -340,45 +340,93 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	tabTN();
 	checkMinitor();
-	$(".image-map-wrapper img[usemap]").maphilight({
-		fill: true,
-		fillColor: "e2b85c",
-		fillOpacity: 0.7,
-		stroke: true,
-		strokeColor: "ced2d5",
-		strokeOpacity: 1,
-		strokeWidth: 2,
-		fade: true,
-		alwaysOn: false,
-		neverOn: false,
-		groupBy: false,
-		wrapClass: true,
-		shadow: false,
-		shadowX: 0,
-		shadowY: 0,
-		shadowRadius: 6,
-		shadowColor: "000000",
-		shadowOpacity: 0.8,
-		shadowPosition: "outside",
-		shadowFrom: false,
-	});
-	$(".image-map-wrapper img[usemap]").rwdImageMaps();
+	if ($(".filed-1").length == 1) {
+		$("#map-image img[usemap]").maphilight({
+			fill: false,
+			fillColor: "e2b85c",
+			fillOpacity: 0.7,
+			stroke: true,
+			strokeColor: "ced2d5",
+			strokeOpacity: 0,
+			strokeWidth: 0,
+			fade: true,
+			alwaysOn: false,
+			neverOn: false,
+			groupBy: false,
+			wrapClass: true,
+			shadow: false,
+			shadowX: 0,
+			shadowY: 0,
+			shadowRadius: 6,
+			shadowColor: "000000",
+			shadowOpacity: 0.8,
+			shadowPosition: "outside",
+			shadowFrom: false,
+		});
+		$(".image-map-wrapper img[usemap]").rwdImageMaps();
 
-	//map hight light text
-	$(".image-map-wrapper area").tooltipster({
-		position: "bottom",
-		contentCloning: true,
-		maxWidth: 250,
-		minWidth: 170,
-		theme: ["tooltipster-vrls", "tooltipster-vrls-customized"],
-	});
-	$(".mb-item").each(function () {
-		var url = $(this).attr("data-url");
-		var id_area = $(this).attr("id");
-		$(
-			'.mb-image-map area[data-tooltip-content = "' + "#" + id_area + '"]'
-		).attr("href", url);
-	});
+		//map hight light text
+		$("#map-image area").tooltipster({
+			position: "bottom",
+			contentCloning: true,
+			maxWidth: 250,
+			minWidth: 170,
+			theme: ["tooltipster-light"],
+		});
+		$(".mb-item").each(function () {
+			var url = $(this).attr("data-url");
+			var id_area = $(this).attr("id");
+			$(
+				'.mb-image-map area[data-tooltip-content = "' +
+					"#" +
+					id_area +
+					'"]'
+			).attr("href", url);
+		});
+	} else {
+		$(".image-map-wrapper img[usemap]").maphilight({
+			fill: true,
+			fillColor: "e2b85c",
+			fillOpacity: 0.7,
+			stroke: true,
+			strokeColor: "ced2d5",
+			strokeOpacity: 1,
+			strokeWidth: 2,
+			fade: true,
+			alwaysOn: false,
+			neverOn: false,
+			groupBy: false,
+			wrapClass: true,
+			shadow: false,
+			shadowX: 0,
+			shadowY: 0,
+			shadowRadius: 6,
+			shadowColor: "000000",
+			shadowOpacity: 0.8,
+			shadowPosition: "outside",
+			shadowFrom: false,
+		});
+		$(".image-map-wrapper img[usemap]").rwdImageMaps();
+
+		//map hight light text
+		$(".image-map-wrapper area").tooltipster({
+			position: "bottom",
+			contentCloning: true,
+			maxWidth: 250,
+			minWidth: 170,
+			theme: ["tooltipster-vrls", "tooltipster-vrls-customized"],
+		});
+		$(".mb-item").each(function () {
+			var url = $(this).attr("data-url");
+			var id_area = $(this).attr("id");
+			$(
+				'.mb-image-map area[data-tooltip-content = "' +
+					"#" +
+					id_area +
+					'"]'
+			).attr("href", url);
+		});
+	}
 });
 
 function initSlide() {

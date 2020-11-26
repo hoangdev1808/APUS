@@ -659,29 +659,43 @@ html
 						&:hover
 							text-decoration: underline
 // Css
+.tooltipster-light
+	.tooltipster-arrow
+		display: none!important
+	.tooltipster-box
+		background-color: #fff!important
+		border: 0px solid #e1e1e1!important
+		border-radius: 0!important
+		box-shadow: 0!important
+		display: flex
+		align-items: center
+		justify-content: center
+		.figcaption
+			padding-top: 10px
+			p
+				color: #041e3c!important
+				font-size: 14/16*1rem
+				text-align: center
+				font-weight: 700
+				text-transform: uppercase
+
 .tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized .tooltipster-box
-	background: #fff
+	background: rgba(226, 184, 92, 0.9)
 	border: 1px solid #e1e1e1
 	border-radius: 0
-	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.4)
+	box-shadow: 5px 5px 2px 0 #0000002c
+	display: flex
+	align-items: center
+	justify-content: center
 	.figcaption
-		padding-top: 10px
 		p
-			color: #041e3c
+			color: white!important
 			font-size: 14/16*1rem
 			text-align: center
 			font-weight: 700
 			text-transform: uppercase
-figure
-	position: relative
-figcaption
-	position: absolute
-	left: 50%
-	-webkit-transform: translateX(-50%) /* Safari iOS */
-	transform: translateX(-50%)
-
 .tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized .tooltipster-content
-	color: blue
+	color: white!important
 	padding: 8px
 
 .tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-top .tooltipster-arrow-border
