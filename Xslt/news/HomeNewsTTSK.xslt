@@ -3,7 +3,7 @@
 <xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
 		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
-		
+
 	</xsl:template>
 	<xsl:template match="Zone">
 		<div class="section-title text-center line animation-top">
@@ -13,7 +13,7 @@
 		<div class="news-list animation-bottom">
 			<div class="row">
 				<xsl:apply-templates select="News"></xsl:apply-templates>
-				
+
 			</div>
 		</div>
 		<div class="view-more animation-bottom">
@@ -57,7 +57,7 @@
 				</div>
 				<div class="caption">
 					<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
-					<a class="name ">
+					<a class="name lcl">
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>

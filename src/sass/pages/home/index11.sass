@@ -2,15 +2,16 @@
 	.main-product
 		margin-top: 26px
 	.product-item
-		+ .product-item
+		&+.product-item
 			margin-top: 20px
 		.image
 			overflow: hidden
 			+img-scale(380/829.99)
+			+hover-image-zoom()
 		.title
 			font-size: 24px
 			font-weight: 700
-			color: $main 
+			color: $main
 			text-transform: uppercase
 			margin-bottom: 20px
 			font-family: $font-2
@@ -44,7 +45,7 @@
 					// position: absolute
 					// top: 50%
 					// left: 100%
-					// transform: translateY(-50%) 
+					// transform: translateY(-50%)
 			+ .product-item
 				flex-direction: row-reverse
 				.title
@@ -61,11 +62,10 @@
 						transform: rotate(180deg)
 						padding-left: 25px
 				// justify-content: flex-start
-		
+
 		@media(min-width: 1440px)
 			.image
 				height: 300px
 		@media(min-width: 1700px)
 			.image
 				height: 353px
-		

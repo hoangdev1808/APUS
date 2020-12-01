@@ -1,10 +1,10 @@
 .h-3
 	width: 100%
 	height: 100vh
-	background-color: rgb(245, 245, 245);
+	background-color: rgb(245, 245, 245)
 	.sec-title
 		@media screen and ( max-width:  1600px)
-			h2 
+			h2
 				font-size: 20px
 			.text
 				font-size: 30px
@@ -14,8 +14,8 @@
 			padding-top: 0
 			margin-bottom: 15px
 			.desc
-				
-				p 
+
+				p
 					font-size: 16px
 	.list-items
 		width: 100%
@@ -30,8 +30,8 @@
 					right: 0
 					content: ''
 					background-image: linear-gradient(#fff, rgb(210, 171, 90), #fff)
-					width: 1px;
-					height: 150px;
+					width: 1px
+					height: 150px
 				&:nth-child(6)
 					&::before
 						display: none
@@ -59,7 +59,7 @@
 						font-size: 16px
 			.desc
 				text-align: center
-				span 
+				span
 					font-size: 14px
 					font-family: "Inter"
 					color: #666666
@@ -72,7 +72,8 @@
 			width: 100%
 			+img-scale(600/1410)
 			padding-top: 38.32624%
-			img 
+			+hover-image-zoom
+			img
 				width: 100%
 				height: 100%
 				object-fit: cover
@@ -86,6 +87,6 @@
 			@media screen and ( max-width: 768px)
 				height: 300px
 	@media(max-width: 576px)
-		height: auto 
+		height: auto
 		.sec-title
 			margin-bottom: 20px

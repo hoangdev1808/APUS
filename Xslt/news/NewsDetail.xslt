@@ -40,7 +40,7 @@
                 </div>
             </div>
         </section>
-        <section class="other-posts">
+        <section class="other-posts" data-aos="fade-left">
             <div class="container">
                 <div class="sec-title center">
                     <div class="title">
@@ -55,10 +55,10 @@
                     </div>
                     <div class="wrap-button">
                         <div class="swiper-prev swiper-button-1">
-                            <img class="back" src="./assets/images/tin-tuc/mui-ten-1.png" />
+                            <em class="lnr lnr-arrow-left"></em>
                         </div>
                         <div class="swiper-next swiper-button-1">
-                            <img class="next" src="./assets/images/tin-tuc/mui-ten-1.png" />
+                            <em class="lnr lnr-arrow-right"></em>
                         </div>
                     </div>
                 </div>

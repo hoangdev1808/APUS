@@ -1,12 +1,14 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="CanhCam.Web.layout" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs"
+	Inherits="CanhCam.Web.layout" %>
 
-<!DOCTYPE html>
-<html id="Html1" runat="server">
+	<!DOCTYPE html>
+	<html id="Html1" runat="server">
 
 	<head id="Head1" runat="server">
 		<title></title>
 		<portal:MetaContent ID="MetaContent" runat="server" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<!-- ////////////// Favicon ////////////// -->
 		<link rel="apple-touch-icon" sizes="57x57" href="/Data/Sites/1/skins/default/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="/Data/Sites/1/skins/default/favicon/apple-icon-60x60.png">
@@ -17,21 +19,28 @@
 		<link rel="apple-touch-icon" sizes="144x144" href="/Data/Sites/1/skins/default/favicon/apple-icon-144x144.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="/Data/Sites/1/skins/default/favicon/apple-icon-152x152.png">
 		<link rel="apple-touch-icon" sizes="180x180" href="/Data/Sites/1/skins/default/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="192x192"
+			href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/Data/Sites/1/skins/default/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
 		<link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
 
-		<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false" JQueryUIThemeName="smoothness" />
+		<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+			JQueryUIThemeName="smoothness" />
 		<portal:Favicon ID="Favicon1" runat="server" />
 		<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="true" />
 		<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
 		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/css/tooltipster.bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
 	</head>
 
 	<body id="Body" runat="server" class="canhcam">
@@ -48,7 +57,8 @@
 						<nav>
 							<div class="header-left">
 								<div class="toggle-menu">
-									<div class="hamburger-button"><span></span><span></span><span></span></div><span>MENU</span>
+									<div class="hamburger-button"><span></span><span></span><span></span></div>
+									<span>MENU</span>
 								</div>
 								<div class="language">
 									<portal:modulewrapper id="mdl160" runat="server" configuremoduleid="160" />
@@ -68,13 +78,23 @@
 								<portal:modulewrapper id="mdl139" runat="server" configuremoduleid="139" />
 							</div>
 							<div class="header-right">
-								<portal:ModuleWrapper ID="mdl173" runat="server" ConfigureModuleId="173" />
-								<portal:ModuleWrapper ID="mdl175" runat="server" ConfigureModuleId="175" />
+								<%-- <portal:ModuleWrapper ID="mdl173" runat="server" ConfigureModuleId="173" />
+								<portal:ModuleWrapper ID="mdl175" runat="server" ConfigureModuleId="175" /> --%>
 
-								<a class="search" href="javascript:void(0)"><em class="material-icons">search</em></a>
+								<a class="search" href="javascript:void(0)" id="search-icon"><em
+										class="material-icons">search</em></a>
 							</div>
 						</nav>
 					</div>
+					<div class="search-wrap">
+						<div class="search-middle">
+							<div class="close-btn">X</div>
+							<div class="wrap-button">
+								<portal:ModuleWrapper ID="mdl184" runat="server" ConfigureModuleId="184" />
+							</div>
+						</div>
+					</div>
+					<div class="overlay"></div>
 				</header>
 				<main>
 					<div id="fake-header">
@@ -93,7 +113,8 @@
 						<asp:ContentPlaceHolder ID="leftContent" runat="server">
 						</asp:ContentPlaceHolder>
 					</asp:Panel>
-					<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins" SkinID="pnlPlain">
+					<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+						SkinID="pnlPlain">
 						<asp:ContentPlaceHolder ID="mainContent" runat="server">
 						</asp:ContentPlaceHolder>
 					</asp:Panel>
@@ -105,6 +126,9 @@
 						<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
 					</asp:Panel>
 				</main>
+				<div id="hotline-button-wrap">
+					<div class="hotline-button"><a href=""><em class="ri-phone-fill"></em>0928 247 247</a></div>
+				</div>
 				<footer>
 					<div class="footer-block">
 						<div class="container">
@@ -119,12 +143,18 @@
 					<div class="col-lg-12">
 						<nav>
 							<ul class="nav navbar-nav listmenu">
-								<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true" runat="server" />
-								<portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open" RenderAsListItem="true" runat="server" />
-								<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog" RenderAsListItem="true" runat="server" />
-								<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit" RenderAsListItem="true" runat="server" />
-								<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true" runat="server" />
-								<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit" RenderAsListItem="true" runat="server" />
+								<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+									runat="server" />
+								<portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open"
+									RenderAsListItem="true" runat="server" />
+								<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+									RenderAsListItem="true" runat="server" />
+								<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+									RenderAsListItem="true" runat="server" />
+								<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+									runat="server" />
+								<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+									RenderAsListItem="true" runat="server" />
 								<li>
 									<div class="form-inline">
 										<div class="form-group">
@@ -144,54 +174,56 @@
 					</div>
 				</div>
 				<script type="text/javascript">
-$(document).ready(function() {
-	$("#pullmenucms").click(function(e) {
-		e.preventDefault();
-		if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
-			ShowToolbar();
-			Set_Cookie('toolbarOpenState', 'open');
-		} else {
-			HideToolbar();
-			Set_Cookie('toolbarOpenState', 'closed');
-		}
-	});
-	var openState = Get_Cookie('toolbarOpenState');
-	if (openState != null) {
-		if (openState == 'closed') {
-			HideToolbar();
-		}
-		if (openState == 'open') {
-			ShowToolbar();
-		}
-	}
-});
+					$(document).ready(function () {
+						$("#pullmenucms").click(function (e) {
+							e.preventDefault();
+							if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+								ShowToolbar();
+								Set_Cookie('toolbarOpenState', 'open');
+							} else {
+								HideToolbar();
+								Set_Cookie('toolbarOpenState', 'closed');
+							}
+						});
+						var openState = Get_Cookie('toolbarOpenState');
+						if (openState != null) {
+							if (openState == 'closed') {
+								HideToolbar();
+							}
+							if (openState == 'open') {
+								ShowToolbar();
+							}
+						}
+					});
 
-function HideToolbar() {
-	$('.cmsadminpanel').addClass("toggled");
-	$('.fa-chevron-circle-right').addClass('fa-rotate-180');
-}
+					function HideToolbar() {
+						$('.cmsadminpanel').addClass("toggled");
+						$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+					}
 
-function ShowToolbar() {
-	$('.cmsadminpanel').removeClass("toggled");
-	$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
-}
+					function ShowToolbar() {
+						$('.cmsadminpanel').removeClass("toggled");
+						$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+					}
 				</script>
 			</portal:AutoHidePanel>
 			<portal:Woopra ID="woopra11" runat="server" />
-			<div id="searchfancybox" style="display: none;">
-				<div class="container">
-					<div class="content">
-						<div class="form-group">
-							<portal:modulewrapper id="mdl153" runat="server" configuremoduleid="153" />
-						</div>
-					</div>
-				</div>
+			<div class="dekstop" id="block__tool">
+				<ul>
+
+					<portal:modulewrapper id="mdl183" runat="server" configuremoduleid="183" />
+
+				</ul>
 			</div>
 		</form>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/js/tooltipster.bundle.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/fullpage.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
 	</body>
 
-</html>
+	</html>

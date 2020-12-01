@@ -11,14 +11,14 @@
 			justify-content: center
 			list-style: none
 			margin-bottom: 67px
-			li 
+			li
 				background-color: #041e3c
 				width: 240px
 				height: 60px
 				border-top: solid 2px #fff
 				line-height: 60px
 				text-align: center
-				a 
+				a
 					padding: 20px 30px
 					font-size: 16px
 					font-family: "Inter"
@@ -29,18 +29,18 @@
 					border-right: solid 2px #fff
 				&.active
 					background-image: linear-gradient( 0deg, rgb(165,122,97) 0%, rgb(233,198,141) 99%)
-					a 
+					a
 						color: #fff
 				@media screen and ( max-width: 575px)
 					width: auto
 					padding: 0 15px
-					a 
+					a
 						padding: 0
 						font-size: 14px
 
 	.block-title
 		margin-bottom: 30px
-		h2 
+		h2
 			font-size: 20px
 			font-family: "Inter"
 			color: rgb(4, 30, 60)
@@ -54,7 +54,7 @@
 		margin: 0 auto
 		text-align: center
 		margin-top: 30px
-		// h1 
+		// h1
 		// 	position: relative
 		// 	font-size: 36px
 		// 	font-family: "SFU Sigvar"
@@ -73,7 +73,7 @@
 		// 		bottom: -30px
 		// 		left: 50%
 		// 		transform: translateX(-50%)
-		p 
+		p
 			text-align: center
 		@media screen and ( max-width: 1024px)
 			width: 100%
@@ -82,7 +82,8 @@
 		height: 600px
 		margin-top: 35px
 		margin-bottom: 60px
-		img 
+		+hover-image-zoom()
+		img
 			width: 100%
 			height: 100%
 			object-fit: cover
@@ -100,7 +101,8 @@
 				.img
 					width: 100%
 					height: 500px
-					img 
+					+hover-image-zoom()
+					img
 						width: 100%
 						height: 100%
 						object-fit: cover
@@ -114,7 +116,7 @@
 					font-family: "Inter"
 					color: rgb(51, 51, 51)
 					text-align: justify
-					// h4 
+					// h4
 					// 	font-size: 20px
 					// 	font-family: "Inter"
 					// 	color: rgb(4, 30, 60)
@@ -122,7 +124,7 @@
 					// 	text-align: left
 					// 	margin-bottom: 30px
 
-					// h3 
+					// h3
 					// 	position: relative
 					// 	font-size: 36px
 					// 	font-family: "SFU Sigvar Demi Boli"
@@ -139,12 +141,12 @@
 					// 		bottom: -30px
 					// 		left: 0
 
-					p 
+					p
 						font-size: 18px
 						font-family: "Inter"
 						color: rgb(51, 51, 51)
 						text-align: justify
-					* + * 
+					* + *
 						margin-top: 15px
 			&:nth-child(1),
 			&:nth-child(3),
@@ -162,9 +164,9 @@
 			@media screen and ( max-width: 1366px)
 				.right
 					.desc
-						h4 
+						h4
 							margin-bottom: 20px
-						h3 
+						h3
 							font-size: 28px
 							margin-bottom: 40px
 			@media screen and ( max-width: 1199px)
@@ -174,23 +176,23 @@
 				.right
 					.desc
 						padding-top: 27px
-						h4 
+						h4
 							margin-bottom: 15px
-						h3 
+						h3
 							font-size: 26px
 			@media screen and ( max-width: 1024px)
 				.right
 					.desc
 						padding-top: 0
-						h4 
+						h4
 							margin-bottom: 15px
 							font-size: 14px
-						h3 
+						h3
 							font-size: 15px
 							margin-bottom: 20px
 							&::after
 								bottom: -15px
-						p 
+						p
 							font-size: 14px
 			@media screen and ( max-width: 575px)
 				.left

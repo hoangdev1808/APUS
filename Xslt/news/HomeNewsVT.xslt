@@ -35,7 +35,7 @@
 			<div class="img">
 				<img class=" ">
 					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
+						<xsl:value-of select="NewsImages[2]/ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">
 						<xsl:value-of select="Title"></xsl:value-of>

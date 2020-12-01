@@ -69,6 +69,7 @@
 			&:hover
 				img
 					transform: scale(1.05)
+					transition: .3s all  ease-in-out
 			img
 				object-fit: contain
 				transition: .4s all  ease-in-out
@@ -81,10 +82,11 @@
 				height: 100%
 				z-index: 111
 				background: rgba(#003c63, 0.3)
-				transition: .2s ease-in-out all
+				transition: .45s ease-in-out all
 		.swiper-slide
 			&.swiper-slide-active
 				.image
+					+hover-image-zoom()
 					+img-scale(455/690)
 					img
 						object-fit: contain

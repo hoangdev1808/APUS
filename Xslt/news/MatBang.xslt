@@ -3,11 +3,20 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
-    <xsl:template match="/">
-        <xsl:value-of select="/NewsList/ZoneDescription" disable-output-escaping="yes"></xsl:value-of>
-        <div class="hidden">
-            <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
-        </div>
+    <xsl:template match="/NewsList">
+        <section class="mat-bang-01 section" data-aos="fade-up">
+            <div class="container">
+                <div class="sec-title center">
+                    <h2>
+                        <xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of>
+                    </h2>
+                </div>
+                <xsl:value-of select="ZoneDescription" disable-output-escaping="yes"></xsl:value-of>
+                <div class="hidden">
+                    <xsl:apply-templates select="News"></xsl:apply-templates>
+                </div>
+            </div>
+        </section>
     </xsl:template>
     <xsl:template match="News">
         <div>
@@ -16,16 +25,6 @@
                 <xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
             </xsl:attribute>
             <div class="figure-tooltip">
-                <div class="figure-image">
-                    <img>
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="ImageUrl"></xsl:value-of>
-                        </xsl:attribute>
-                        <xsl:attribute name="alt">
-                            <xsl:value-of select="Title"></xsl:value-of>
-                        </xsl:attribute>
-                    </img>
-                </div>
                 <div class="figcaption">
                     <p>
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
