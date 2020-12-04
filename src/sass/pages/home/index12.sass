@@ -16,47 +16,55 @@
 				background: #ffffff
 				min-height: 109px
 				padding: 10px 30px
-				time 
+				transition: .3s all  ease-in-out
+				time
 					font-size: 12px
 					font-weight: 400
 					color: #999999
-				.name 
+					transition: .3s all  ease-in-out
+				.name
 					display: block
 					font-size: 18px
 					font-weight: 700
-					color: $blue 
+					color: $blue
 					transition: .2s ease-in-out all
 					line-height: 1.2
 					+line(3)
 					height: 65px
-					&:hover 
+					&:hover
 						color: $main
 				.view-detail
 					display: none
 					font-size: 10px
 					font-weight: 500
 					color: $main
-			&:hover 
-				.image 
-					img 
+			&:hover
+				.image
+					img
 						transform: scale(1.1)
+				.caption
+					background-color: $blue
+					time
+						color: white
+					.name
+						color: white
 	.view-more
 		display: flex
 		justify-content: center
 		align-items: center
 		background: $blue
 		width: max-content
-		margin-left: auto 
-		margin-right: auto 
+		margin-left: auto
+		margin-right: auto
 		margin-top: 30px
 		border: 1px solid $blue
 		transition: .2s ease-in-out all
-		a 
+		a
 			display: flex
 			justify-content: center
 			align-items: center
 			height: 50px
-			// background: $blue 
+			// background: $blue
 			min-width: 150px
 			padding: 5px 15px
 			text-align: center
@@ -66,6 +74,6 @@
 			font-size: 16px
 			font-weight: 800
 			text-transform: uppercase
-		&:hover 
+		&:hover
 			background: #ffffff
 			border-color: $main

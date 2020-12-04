@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
+	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
 		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
-
 	</xsl:template>
 	<xsl:template match="Zone">
-		<div class="section-title text-center line animation-top">
-			<p><xsl:value-of select="/ZoneList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of></p>
-			<h2><xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of></h2>
+		<div class="section-title text-center line animation-top ">
+			<p>
+				<xsl:value-of select="/ZoneList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
+			</p>
+			<h2>
+				<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
+			</h2>
 		</div>
-		<div class="news-list animation-bottom">
+		<div class="news-list animation-bottom ">
 			<div class="row">
 				<xsl:apply-templates select="News"></xsl:apply-templates>
-
 			</div>
 		</div>
 		<div class="view-more animation-bottom">
@@ -28,6 +32,8 @@
 					<xsl:value-of select="Target"></xsl:value-of>
 				</xsl:attribute>
 				Xem thêm
+
+			
 			</a>
 		</div>
 	</xsl:template>
@@ -56,7 +62,13 @@
 					</a>
 				</div>
 				<div class="caption">
-					<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
+					<time>
+						<xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.
+						
+						<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.
+						
+						<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of>
+					</time>
 					<a class="name lcl">
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
@@ -81,6 +93,8 @@
 							<xsl:value-of select="Target"></xsl:value-of>
 						</xsl:attribute>
 						Xem chi tiết
+
+					
 					</a>
 				</div>
 			</div>
