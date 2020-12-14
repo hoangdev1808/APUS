@@ -58,9 +58,28 @@
 		color: #e9c68d
 .video-banner
 	width: 100%
+	overflow: hidden
 	video
+		transform: scale(1.03,1)
 		width: 100%
 		height: 100%
+		margin-top: -3px
+		@media screen and (max-height: 785px)
+			margin-bottom: -111px
+		// @media only screen and (max-height : 765px)
+		// 	margin-bottom: -100px
+		// @media only screen and (max-device-height: 765px)
+		// 	margin-bottom: -100px
+#nav-pagination
+	top: 14%!important
+#nav-pagination ul li
+	margin: 25px 0px!important
+header nav .header-left .toggle-menu span
+	@media screen and ( max-width: 575px )
+		font-size: 0!important
+header nav .header-left .toggle-menu
+	@media screen and ( max-width: 575px )
+		width: 40px!important
 .box-post-tin
 	position: relative
 	padding-bottom: 50px
@@ -723,3 +742,16 @@ html
 
 .tooltipster-sidetip.tooltipster-vrls.tooltipster-vrls-customized.tooltipster-right .tooltipster-arrow-border
 	display: none
+#fake-header .nav-item.dropdown .nav-link::after
+	content: "\e874"
+	font-family: 'Linearicons-Free'
+	font-size: 16px
+	position: absolute
+	top: 53%
+	transform: translateY(-50%)
+	right: -12px
+#fake-header .nav-item.dropdown .nav-link
+	position: relative
+	&.activeIcon
+		&::after
+			content: "\e873"

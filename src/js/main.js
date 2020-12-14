@@ -307,6 +307,18 @@ const displayNoneBut = () => {
 	$(".FirstPage").parent().css("display", "none");
 	$(".BackPage").parent().css("display", "none");
 };
+function srcollHeaderChild() {
+	if ($(".full-page").length >= 1) {
+		$("#fake-header ul.nav-bar .nav-item.dropdown .nav-link").on(
+			"click",
+			function (e) {
+				e.preventDefault(),
+					$(this).next(".dropdown-menu").slideToggle();
+				$(this).toggleClass("activeIcon");
+			}
+		);
+	}
+}
 document.addEventListener("DOMContentLoaded", () => {
 	AOS.init({
 		disable: "mobile",
@@ -332,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	toolBout();
 	menuFake();
 	checkFullpage();
+	srcollHeaderChild();
 	// fullpage();
 	$(window).resize(function () {
 		if ($(window).width() <= 1024) {

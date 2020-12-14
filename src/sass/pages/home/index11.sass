@@ -2,6 +2,11 @@
 	.main-product
 		margin-top: 26px
 	.product-item
+		&:hover
+			.image .button-icon-search
+				opacity: 1
+		.image .button-icon-search
+			transition: .3s all  ease-in-out
 		&+.product-item
 			margin-top: 20px
 		.image
