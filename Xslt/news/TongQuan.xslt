@@ -124,7 +124,6 @@
 									<xsl:value-of select="Target"></xsl:value-of>
 								</xsl:attribute>
 								xem thêm
-
 							
 							</a>
 						</div>

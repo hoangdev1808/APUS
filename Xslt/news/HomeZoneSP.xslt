@@ -47,9 +47,9 @@
 						</xsl:attribute>
 					</img>
 					<div class="button-icon-search">
-						<a href="" data-fancybox="">
+						<a href="">
 							<xsl:attribute name="href">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
+								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
 							<em class="mdi mdi-magnify"></em>
 						</a>

@@ -355,12 +355,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	checkMinitor();
 	if ($(".filed-1").length == 1) {
 		$("#map-image img[usemap]").maphilight({
-			fill: false,
+			lor: "ced2d5",
+			strokeOfill: false,
 			fillColor: "e2b85c",
 			fillOpacity: 0.7,
 			stroke: true,
-			strokeColor: "ced2d5",
-			strokeOpacity: 0,
+			strokeCopacity: 0,
 			strokeWidth: 0,
 			fade: true,
 			alwaysOn: false,
