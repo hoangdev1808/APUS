@@ -38,29 +38,18 @@
 					</h3>
 				</div>
 				<div class="image">
-					<a>
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
+					<img class=" ">
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:attribute name="title">
+						<xsl:attribute name="alt">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-						<img class=" ">
-							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="Title"></xsl:value-of>
-							</xsl:attribute>
-						</img>
-					</a>
+					</img>
 					<div class="button-icon-search">
-						<a href="">
+						<a href="" data-fancybox="">
 							<xsl:attribute name="href">
-								<xsl:value-of select="Url"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="title">
-								<xsl:value-of select="Title"></xsl:value-of>
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
 							</xsl:attribute>
 							<em class="mdi mdi-magnify"></em>
 						</a>

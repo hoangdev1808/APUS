@@ -24,12 +24,14 @@ header
 				cursor: pointer
 				position: relative
 				padding: 20px
-				background-color: rgb(4, 30, 60)
+				// background-color: rgb(4, 30, 60)
 				width: 110px
 				height: 40px
 				display: flex
 				align-items: center
-				transition: .3s all linear
+				background-image: $gradient-1
+				+hover-gradient()
+				// transition: .3s all linear
 				.hamburger-button
 					position: relative
 					width: 20px
@@ -255,7 +257,9 @@ header
 			height: 71px
 			text-align: center
 			transition: all .3s ease-in-out
-			@media screen and ( min-width: 1024px )
+			@media screen and ( min-width: 1300px )
+				width: 130px
+			@media screen and ( min-width: 1500px )
 				width: 150px
 			img
 				width: 100%

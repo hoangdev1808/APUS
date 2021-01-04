@@ -269,37 +269,39 @@ const mainSearch = () => {
 	});
 };
 const clickScrollTo = () => {
-	$("a").on("click", function (event) {
-		console.log(this.hash);
-		if (this.hash !== "") {
-			event.preventDefault();
-			var hash = this.hash;
-			$(this)
-				.parent()
-				.addClass("active")
-				.siblings()
-				.removeClass("active");
-			const TopDesktop =
-				$(hash).offset().top - 71 - $(".filed-nav").outerHeight();
-			const TopMobile =
-				$(hash).offset().top - $(".filed-nav").outerHeight();
-			if ($(window).width() >= 1024) {
-				$("html, body").animate(
-					{
-						scrollTop: TopDesktop,
-					},
-					300
-				);
-			} else {
-				$("html, body").animate(
-					{
-						scrollTop: TopMobile,
-					},
-					300
-				);
-			}
-		} // End if
-	});
+	if ($(".nha-mau").length != 1) {
+		$("a").on("click", function (event) {
+			console.log(this.hash);
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$(this)
+					.parent()
+					.addClass("active")
+					.siblings()
+					.removeClass("active");
+				const TopDesktop =
+					$(hash).offset().top - 71 - $(".filed-nav").outerHeight();
+				const TopMobile =
+					$(hash).offset().top - $(".filed-nav").outerHeight();
+				if ($(window).width() >= 1024) {
+					$("html, body").animate(
+						{
+							scrollTop: TopDesktop,
+						},
+						300
+					);
+				} else {
+					$("html, body").animate(
+						{
+							scrollTop: TopMobile,
+						},
+						300
+					);
+				}
+			} // End if
+		});
+	}
 };
 const displayNoneBut = () => {
 	$(".NextPage").parent().css("display", "none");
