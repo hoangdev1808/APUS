@@ -11,21 +11,21 @@
 	"use strict";
 	($.fn.tabslet = function (options) {
 		var defaults = {
-			mouseevent: "click",
-			activeclass: "active",
-			attribute: "href",
-			animation: !1,
-			autorotate: !1,
-			deeplinking: !1,
-			pauseonhover: !0,
-			delay: 2e3,
-			active: 1,
-			container: !1,
-			controls: {
-				prev: ".prev",
-				next: ".next",
+				mouseevent: "click",
+				activeclass: "active",
+				attribute: "href",
+				animation: 1,
+				autorotate: !1,
+				deeplinking: !1,
+				pauseonhover: !0,
+				delay: 2e3,
+				active: 1,
+				container: !1,
+				controls: {
+					prev: ".prev",
+					next: ".next",
+				},
 			},
-		},
 			options = $.extend(defaults, options);
 		return this.each(function () {
 			function deep_link() {
@@ -70,45 +70,45 @@
 						: $this.data("active") || options.active),
 					_tabs.hide(),
 					$this.opts.active &&
-					(_tabs.eq($this.opts.active - 1).show(),
+						(_tabs.eq($this.opts.active - 1).show(),
 						elements
 							.eq($this.opts.active - 1)
 							.addClass(options.activeclass));
 				var fn = eval(function (t, e) {
-					var s = e
-						? elements
-							.find(
-								"a[" +
-								$this.opts.attribute +
-								'="' +
-								e +
-								'"]'
-							)
-							.parent()
-						: $(this);
-					s.trigger("_before"),
-						elements.removeClass(options.activeclass),
-						s.addClass(options.activeclass),
-						_tabs.hide(),
-						(i = elements.index(s));
-					var o = e || s.find("a").attr($this.opts.attribute);
-					return (
-						$this.opts.deeplinking && (location.hash = o),
-						$this.opts.animation
-							? _container.find(o).animate(
-								{
-									opacity: "show",
-								},
-								"slow",
-								function () {
-									s.trigger("_after");
-								}
-							)
-							: (_container.find(o).show(),
-								s.trigger("_after")),
-						!1
-					);
-				}),
+						var s = e
+							? elements
+									.find(
+										"a[" +
+											$this.opts.attribute +
+											'="' +
+											e +
+											'"]'
+									)
+									.parent()
+							: $(this);
+						s.trigger("_before"),
+							elements.removeClass(options.activeclass),
+							s.addClass(options.activeclass),
+							_tabs.hide(),
+							(i = elements.index(s));
+						var o = e || s.find("a").attr($this.opts.attribute);
+						return (
+							$this.opts.deeplinking && (location.hash = o),
+							$this.opts.animation
+								? _container.find(o).animate(
+										{
+											opacity: "show",
+										},
+										"slow",
+										function () {
+											s.trigger("_after");
+										}
+								  )
+								: (_container.find(o).show(),
+								  s.trigger("_after")),
+							!1
+						);
+					}),
 					init = eval("elements." + $this.opts.mouseevent + "(fn)"),
 					t,
 					forward = function () {
@@ -117,7 +117,7 @@
 								? elements.eq(i).trigger("mouseover")
 								: elements.eq(i).click(),
 							$this.opts.autorotate &&
-							(clearTimeout(t),
+								(clearTimeout(t),
 								(t = setTimeout(forward, $this.opts.delay)),
 								$this.mouseover(function () {
 									$this.opts.pauseonhover && clearTimeout(t);
@@ -125,15 +125,15 @@
 					};
 				$this.opts.autorotate &&
 					((t = setTimeout(forward, $this.opts.delay)),
-						$this.hover(
-							function () {
-								$this.opts.pauseonhover && clearTimeout(t);
-							},
-							function () {
-								t = setTimeout(forward, $this.opts.delay);
-							}
-						),
-						$this.opts.pauseonhover &&
+					$this.hover(
+						function () {
+							$this.opts.pauseonhover && clearTimeout(t);
+						},
+						function () {
+							t = setTimeout(forward, $this.opts.delay);
+						}
+					),
+					$this.opts.pauseonhover &&
 						$this.on("mouseleave", function () {
 							clearTimeout(t),
 								(t = setTimeout(forward, $this.opts.delay));
