@@ -16,19 +16,30 @@
 			</p>
 		</div>
 		<div class="row animation-bottom fade-in-up">
-			<div class="col-xl-8 col-md-6 pr-0">
+			<div class=".col-xl-8 col-lg-8 col-md-12 pr-0">
 				<div class="img ">
-					<img class=" ">
-						<xsl:attribute name="src">
+					<a>
+						<xsl:attribute name="href">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:attribute name="alt">
+						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-					</img>
+						<xsl:attribute name="data-fancybox">
+							<xsl:text disable-output-escaping="yes">Image</xsl:text>
+						</xsl:attribute>
+						<img class=" ">
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+						</img>
+					</a>
 				</div>
 			</div>
-			<div class="col-xl-4 col-md-6 pl-0">
+			<div class=".col-xl-4 col-lg-4 col-md-12 pl-0">
 				<div class="content">
 					<xsl:apply-templates select="News[1]"></xsl:apply-templates>
 				</div>

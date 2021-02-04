@@ -31,14 +31,25 @@
 				<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 			</div>
 			<div class="img ani-left-t fade-in-up xam">
-				<img class="">
-					<xsl:attribute name="src">
+				<a>
+					<xsl:attribute name="href">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
-					<xsl:attribute name="alt">
+					<xsl:attribute name="data-fancybox">
+						<xsl:text disable-output-escaping="yes">Image</xsl:text>
+					</xsl:attribute>
+					<xsl:attribute name="title">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
-				</img>
+					<img class="">
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</a>
 			</div>
 		</div>
 	</xsl:template>

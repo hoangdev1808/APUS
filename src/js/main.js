@@ -50,7 +50,7 @@ const toggleMenuMobile = () => {
 //Header when scroll
 const activeHeaderWhenScroll = () => {
 	window.addEventListener("scroll", function () {
-		if (window.pageYOffset > 0 && $(window).width() >= 1024) {
+		if (window.pageYOffset > 0 && $(window).width() > 1024) {
 			document.querySelector("header").classList.add("header-scrolled");
 			$("header").find(".logo").addClass("active");
 		} else {
@@ -311,14 +311,59 @@ const displayNoneBut = () => {
 };
 function srcollHeaderChild() {
 	if ($(".full-page").length >= 1) {
-		$("#fake-header ul.nav-bar .nav-item.dropdown .nav-link").on(
-			"click",
-			function (e) {
-				e.preventDefault(),
-					$(this).next(".dropdown-menu").slideToggle();
-				$(this).toggleClass("activeIcon");
+		$("#fake-header ul.nav-bar .nav-item.dropdown .nav-link").click(
+			function () {
+				if ($(this).next(".dropdown-menu").is(".active")) {
+					return true;
+				} else {
+					$(this)
+						.closest(".nav-bar")
+						.find(".dropdown-menu")
+						.slideUp();
+					if ($(this).parent().hasClass("active")) {
+						$(this).next(".dropdown-menu").slideUp();
+						$(this).removeClass("activeIcon");
+						$(this).parent().removeClass("active");
+					} else {
+						$(this)
+							.closest(".nav-bar")
+							.find(".nav-link")
+							.removeClass("activeIcon");
+						$(this)
+							.closest(".nav-bar")
+							.find(".dropdown")
+							.removeClass("active");
+						$(this)
+							.closest(".nav-bar")
+							.find(".dropdown-menu")
+							.removeClass("active");
+						$(this).parent().addClass("active");
+						$(this).next(".dropdown-menu").addClass("active");
+						$(this).next(".dropdown-menu").slideDown();
+						$(this).addClass("activeIcon");
+					}
+					return false;
+				}
 			}
 		);
+		// $("#fake-header ul.nav-bar .nav-item.dropdown .nav-link").on(
+		// 	"click",
+		// 	function (e) {
+		// 		$(this).closest(".nav-bar").find(".dropdown-menu").slideUp();
+		// 		$(this)
+		// 			.closest(".nav-bar")
+		// 			.find(".activeIcon")
+		// 			.removeClass("activeIcon");
+		// 		$(this).addClass("activeIcon123");
+		// 		if ($(this).hasClass("activeIcon")) {
+		// 			$(this).next(".dropdown-menu").slideUp();
+		// 			$(this).removeClass("activeIcon");
+		// 		} else {
+		// 			$(this).next(".dropdown-menu").slideDown();
+		// 			$(this).addClass("activeIcon");
+		// 		}
+		// 	}
+		// );
 	}
 }
 document.addEventListener("DOMContentLoaded", () => {
