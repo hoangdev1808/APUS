@@ -445,9 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	} else {
 		$(".image-map-wrapper img[usemap]").maphilight({
-			fill: true,
-			fillColor: "e2b85c",
-			fillOpacity: 0.7,
+			fillOpacity: 0.9,
 			stroke: true,
 			strokeColor: "ced2d5",
 			strokeOpacity: 1,

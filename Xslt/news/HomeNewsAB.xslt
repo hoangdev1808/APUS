@@ -40,14 +40,25 @@
 			</div>
 			<div class="col-xl-12" >
 				<div class="img fade-in-up">
-					<img class=" ">
-						<xsl:attribute name="src">
+					<a>
+						<xsl:attribute name="data-fancybox">
+							<xsl:text disable-output-escaping="yes">Image</xsl:text>
+						</xsl:attribute>
+						<xsl:attribute name="href">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:attribute name="alt">
+						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-					</img>
+						<img class="">
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+						</img>
+					</a>
 				</div>
 			</div>
 		</div>

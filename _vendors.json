@@ -10,7 +10,8 @@
 		"bower_components/swiper/dist/js/swiper.min.js",
 		"bower_components/aos/dist/aos.js",
 		"bower_components/fancybox/dist/jquery.fancybox.js",
-		"vendors/Tabslet.js"
+		"vendors/Tabslet.js",
+		"vendors/jquery.maphilight.min.js"
 	],
 	"css": [
 		"node_modules/@mdi/font/css/materialdesignicons.min.css",
